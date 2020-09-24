@@ -1,4 +1,5 @@
 
+
 html {
     background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
 }
@@ -37,3 +38,19 @@ img {
     align-content: center;
     margin: 300px;
 }
+
+header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 90px;
+  font-weight: bolder;
+}
+h2 {
+  font-weight: bold;
+  font-size: large;
+}
+
