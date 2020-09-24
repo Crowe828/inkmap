@@ -7,21 +7,26 @@ html {
 .toe{
     background-color: whitesmoke;
     text-align: center;
-    position:absolute;
-    bottom:0;
     width:100%;
-    margin-top: 30px;
-     padding: 15px;
+    padding: 15px;
     color: #008080;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    
 }
-img {
-    align-content: center;
-    margin: 40px;
+
+#tatGun {
+    
+    margin-left: 350px;
+    margin-bottom: 60px;
+    height: 250px;
+    width: 250px;
+    
+    
 }
 
-
-
-/* Define the main Navigation block */
 .myNav {
     display: block;
     height: 50px;
@@ -29,14 +34,27 @@ img {
     background-color: whitesmoke;
 }
 
-/* This is optional, however if you want to display the active link differently apply a background to it */
 .myNav li a.active {
     background-color: #3786E1;
 
 }
+
+#search-input{
+    
+    width: 400px;
+    height: 40px;
+}
 .card {
     align-content: center;
-    margin: 300px;
+    margin: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+  
+}
+.searchCard{
+margin-top: 90px;
+    margin-left: 70px;
+   
 }
 
 header {
@@ -50,7 +68,8 @@ h1 {
   font-weight: bolder;
 }
 h2 {
+    padding-top:40px;
   font-weight: bold;
-  font-size: large;
+  text-align: center;
 }
 
