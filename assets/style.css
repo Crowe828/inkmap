@@ -29,24 +29,24 @@ html {
 }
 
 
-    position:absolute;
-    bottom:0;
-    width:100%;
-    margin-top: 30px;
-     padding: 15px;
-    color: #008080;
-}
+   
 img {
     align-content: center;
     margin: 40px;
 }
 
 
+.brain{
+  
+  margin: -40px;
+
+}
 .myNav {
     display: block;
     height: 50px;
     line-height: 50px;
     background-color: whitesmoke;
+
 }
 
 .myNav li a.active {
@@ -74,30 +74,21 @@ margin-top: 90px;
 
 
 
-}
-.card {
-    align-content: center;
-    margin: 300px;
-}
-
-
-header {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-h1 {
-  font-size: 90px;
-  font-weight: bolder;
-}
 h2 {
     padding-top:40px;
   font-weight: bold;
 
   text-align: center;
 
-  font-size: large;
-
 }
 
+.blot {
+
+  height: 130px;
+  margin: 0px;
+}
+
+header {
+   margin-right: 180px;
+  text-align: center;
+}
