@@ -20,7 +20,10 @@ img {
     margin: 40px;
 }
 
-
+.brain{
+  
+  margin: -40px;
+}
 
 
 
@@ -34,25 +37,27 @@ img {
 
 
 
-}
+
 .card {
-    align-content: center;
+    align-self: center;
     margin: 300px;
 }
 
 
-header {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
 
-h1 {
-  font-size: 90px;
-  font-weight: bolder;
-}
+
 h2 {
   font-weight: bold;
   font-size: large;
 }
 
+.blot {
+
+  height: 130px;
+  margin: 0px;
+}
+
+header {
+   margin-right: 180px;
+  text-align: center;
+}
