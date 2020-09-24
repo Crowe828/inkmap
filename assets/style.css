@@ -1,3 +1,9 @@
+
+
+html {
+    background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
+}
+
 .toe{
     background-color: whitesmoke;
     text-align: center;
@@ -8,6 +14,11 @@
      padding: 15px;
     color: #008080;
 }
+img {
+    align-content: center;
+    margin: 40px;
+}
+
 
 
 /* Define the main Navigation block */
@@ -22,19 +33,24 @@
 .myNav li a.active {
     background-color: #3786E1;
 
+}
+.card {
+    align-content: center;
+    margin: 300px;
+}
+
 header {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 90px;
-    font-weight: bolder;
-} 
-h2 { 
-    font-weight: bold;
-    font-size: large;
+  font-size: 90px;
+  font-weight: bolder;
 }
-
+h2 {
+  font-weight: bold;
+  font-size: large;
+}
 
