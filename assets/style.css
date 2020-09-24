@@ -7,6 +7,7 @@ html {
 .toe{
     background-color: whitesmoke;
     text-align: center;
+
     width:100%;
     padding: 15px;
     color: #008080;
@@ -26,6 +27,20 @@ html {
     
     
 }
+
+
+    position:absolute;
+    bottom:0;
+    width:100%;
+    margin-top: 30px;
+     padding: 15px;
+    color: #008080;
+}
+img {
+    align-content: center;
+    margin: 40px;
+}
+
 
 .myNav {
     display: block;
@@ -57,6 +72,15 @@ margin-top: 90px;
    
 }
 
+
+
+}
+.card {
+    align-content: center;
+    margin: 300px;
+}
+
+
 header {
   text-align: center;
   margin-top: 30px;
@@ -70,6 +94,10 @@ h1 {
 h2 {
     padding-top:40px;
   font-weight: bold;
+
   text-align: center;
+
+  font-size: large;
+
 }
 
