@@ -1,6 +1,10 @@
 .toe{
-
-text-align: center;
-
-
+    background-color: whitesmoke;
+ text-align: center;
+    position:absolute;
+    bottom:0;
+    width:100%;
+   margin-top: 30px;
+   padding: 15px;
+    color: #008080;
 }
