@@ -1,79 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inkmap</title>
-  </head>
-  <body>
-<img src="https://iepcourse.files.wordpress.com/2017/10/cover.gif">
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 1</title>
-
-    <!-- font awesome  -->
-    <script
-      src="https://kit.fontawesome.com/f4677e3cb7.js"
-      crossorigin="anonymous"
-    ></script>
-
-
-    <!-- bulma css framework -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
-    />
-
-    <!-- our style sheet  -->
-    <link rel="stylesheet" href="assets/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inkmap</title>
 
 
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-      // Google Places API
-      var googleKey = "AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk";
-      var googleURL =
-        "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key=" +
-        googleKey;
+  <!-- font awesome  -->
+  <script src="https://kit.fontawesome.com/f4677e3cb7.js" crossorigin="anonymous"></script>
 
-      // Unsplash API
-      var unsplashKey = "3PslmuoCEMvFzIRfkyw7ksNQYvOjj8xdMYogY2RSBnY";
-      var unsplashURL =
-        "https://api.unsplash.com/photos/?client_id=" + unsplashKey;
+  <!-- bulma css framework -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
 
-      // Retrieving Google Places API info
-      $.ajax({
-        url: googleURL,
-        method: "GET",
-      }).then(function (response) {
-        console.log(response);
-      });
+  <!-- our style sheet  -->
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
 
-      // Retrieving Unsplash API info
-      $.ajax({
-        url: unsplashURL,
-        method: "GET",
-      }).then(function (response) {
-        console.log(response);
-      });
-    </script>
 
-  <body>
-    <input class="input is-rounded" type="text" placeholder="Rounded input" />
-    <a class="button is-info"> Search </a>
+<body>
+  <img src="https://iepcourse.files.wordpress.com/2017/10/cover.gif">
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- our js  -->
-    <script src="assets/script.js"></script>
 
-  </body>
+
+  <input class="input is-rounded" type="text" placeholder="Rounded input" />
+  <a class="button is-info"> Search </a>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- our js  -->
+  <script src="assets/script.js"></script>
+
+</body>
+
 </html>
