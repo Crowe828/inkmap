@@ -1,11 +1,13 @@
+
+
 .toe{
     background-color: whitesmoke;
- text-align: center;
+    text-align: center;
     position:absolute;
     bottom:0;
     width:100%;
-   margin-top: 30px;
-   padding: 15px;
+    margin-top: 30px;
+     padding: 15px;
     color: #008080;
 }
 
@@ -15,10 +17,11 @@
     display: block;
     height: 50px;
     line-height: 50px;
-    background-color: #333;
+    background-color: whitesmoke;
 }
 
 /* This is optional, however if you want to display the active link differently apply a background to it */
 .myNav li a.active {
     background-color: #3786E1;
+
 }
