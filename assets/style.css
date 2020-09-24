@@ -1,78 +1,76 @@
-
-
+/* Image of a brick wall for our page's background */
 html {
-    background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
+  background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
 }
 
-.toe{
-    background-color: whitesmoke;
-    text-align: center;
-
-    width:100%;
-    padding: 15px;
-    color: #008080;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    
+/* Footer */
+.toe {
+  background-color: whitesmoke;
+  text-align: center;
+  width:100%;
+  padding: 15px;
+  color: #008080;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 #tatGun {
-    
-    margin-left: 350px;
-    margin-bottom: 60px;
-    height: 250px;
-    width: 250px;
-    
-    
+  margin-left: 350px;
+  margin-bottom: 60px;
+  height: 250px;
+  width: 250px;
 }
 
-
-   
-img {
-    align-content: center;
-    margin: 40px;
-}
-
-
-.brain{
-  
+/* Define the main Navigation block */
+.brain {
   margin: -40px;
-
 }
-.myNav {
-    display: block;
-    height: 50px;
-    line-height: 50px;
-    background-color: whitesmoke;
 
+.myNav {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  background-color: whitesmoke;
+}
+
+.main-container {
+  margin-bottom: 100px;
 }
 
 .myNav li a.active {
-    background-color: #3786E1;
-
+  background-color: #3786E1;
 }
 
-#search-input{
-    
-    width: 400px;
-    height: 40px;
+#search-input {
+  width: 400px;
+  height: 40px;
 }
+
 .card {
+  align-content: center;
+  margin: 300px;
+}
+
+/* Displays title of page */
+h1 {
+ font-size: 90px;
+ font-weight: bolder;
+}
+
+/* Displays a brief explanation of the page */
     align-content: center;
     margin: 100px;
     margin-left: 200px;
     margin-right: 200px;
   
 }
-.searchCard{
-margin-top: 90px;
-    margin-left: 70px;
-   
+
+.searchCard {
+  margin-top: 90px;
+  margin-left: 70px;
 }
-
-
 
 h2 {
     padding-top:40px;
@@ -83,7 +81,6 @@ h2 {
 }
 
 .blot {
-
   height: 130px;
   margin: 0px;
 }
