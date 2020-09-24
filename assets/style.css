@@ -7,20 +7,27 @@ html {
 .toe {
   background-color: whitesmoke;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin-top: 30px;
+  width:100%;
   padding: 15px;
   color: #008080;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 
-img {
-  align-content: center;
-  margin: 40px;
+#tatGun {
+  margin-left: 350px;
+  margin-bottom: 60px;
+  height: 250px;
+  width: 250px;
 }
 
 /* Define the main Navigation block */
+.brain {
+  margin: -40px;
+}
+
 .myNav {
   display: block;
   height: 50px;
@@ -32,25 +39,53 @@ img {
   margin-bottom: 100px;
 }
 
+.myNav li a.active {
+  background-color: #3786E1;
+}
+
+#search-input {
+  width: 400px;
+  height: 40px;
+}
+
 .card {
   align-content: center;
   margin: 300px;
 }
 
-header {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 /* Displays title of page */
 h1 {
-  font-size: 90px;
-  font-weight: bolder;
+ font-size: 90px;
+ font-weight: bolder;
 }
 
 /* Displays a brief explanation of the page */
+    align-content: center;
+    margin: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+  
+}
+
+.searchCard {
+  margin-top: 90px;
+  margin-left: 70px;
+}
+
 h2 {
+    padding-top:40px;
   font-weight: bold;
-  font-size: large;
+
+  text-align: center;
+
+}
+
+.blot {
+  height: 130px;
+  margin: 0px;
+}
+
+header {
+   margin-right: 180px;
+  text-align: center;
 }
