@@ -1,5 +1,3 @@
-
-
 .toe{
     background-color: whitesmoke;
     text-align: center;
@@ -24,4 +22,19 @@
 .myNav li a.active {
     background-color: #3786E1;
 
+header {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+h1 {
+    font-size: 90px;
+    font-weight: bolder;
+} 
+h2 { 
+    font-weight: bold;
+    font-size: large;
+}
+
+
