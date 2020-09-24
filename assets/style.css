@@ -1,28 +1,24 @@
-
-
-
+/* Image of a brick wall for our page's background */
 html {
-    background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
+  background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
 }
 
-.toe{
-    background-color: whitesmoke;
-    text-align: center;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    margin-top: 30px;
-     padding: 15px;
-    color: #008080;
+/* Footer */
+.toe {
+  background-color: whitesmoke;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  color: #008080;
 }
+
 img {
-    align-content: center;
-    margin: 40px;
+  align-content: center;
+  margin: 40px;
 }
-
-
-
-
 
 /* Define the main Navigation block */
 .myNav {
@@ -32,14 +28,14 @@ img {
   background-color: whitesmoke;
 }
 
-
-
+.main-container {
+  margin-bottom: 100px;
 }
+
 .card {
-    align-content: center;
-    margin: 300px;
+  align-content: center;
+  margin: 300px;
 }
-
 
 header {
   text-align: center;
@@ -47,12 +43,14 @@ header {
   margin-bottom: 30px;
 }
 
+/* Displays title of page */
 h1 {
   font-size: 90px;
   font-weight: bolder;
 }
+
+/* Displays a brief explanation of the page */
 h2 {
   font-weight: bold;
   font-size: large;
 }
-

@@ -31,29 +31,33 @@
       </h2>
     </header>
 
-    <!-- Search bar -->
-    <label>Search for Inspiration:</label>
-    <form class="input-group">
-      <input
-        id="search-input"
-        class="form-control"
-        type="text"
-        placeholder="Search"
-      />
-      <div class="input-group-append">
-        <button
-          type="submit"
-          id="search-btn"
-          class="search-btn fas fa-search"
-        ></button>
-      </div>
-    </form>
-    <img src="https://iepcourse.files.wordpress.com/2017/10/cover.gif" />
-
-    <i class="fas fa-syringe"></i>
+    <div class="container main-container">
+      <!-- Search bar -->
+      <label class="label is-medium">Search for Inspiration:</label>
+      <form class="searchbar">
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input
+              id="search-input"
+              class="input is-medium"
+              type="text"
+              placeholder="Search"
+            />
+          </div>
+          <div class="control">
+            <button
+              type="submit"
+              id="search-btn"
+              class="button is-medium is-danger search-btn fas fa-syringe"
+            ></button>
+          </div>
+        </div>
+      </form>
+      <img src="https://iepcourse.files.wordpress.com/2017/10/cover.gif" />
+    </div>
 
     <footer class="toe">
-      <p>InkMap|The Wombats &copy;</p>
+      <p>Inkmap | The Wombats &copy;</p>
     </footer>
 
     <!-- jQuery -->
