@@ -1,40 +1,33 @@
-.toe{
-    background-color: whitesmoke;
-    text-align: center;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    margin-top: 30px;
-     padding: 15px;
-    color: #008080;
-}
-
-
 /* Define the main Navigation block */
 .myNav {
-    display: block;
-    height: 50px;
-    line-height: 50px;
-    background-color: whitesmoke;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  background-color: whitesmoke;
 }
 
-/* This is optional, however if you want to display the active link differently apply a background to it */
-.myNav li a.active {
-    background-color: #3786E1;
-
 header {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 90px;
-    font-weight: bolder;
-} 
-h2 { 
-    font-weight: bold;
-    font-size: large;
+  font-size: 90px;
+  font-weight: bolder;
+}
+h2 {
+  font-weight: bold;
+  font-size: large;
 }
 
-
+.toe {
+  background-color: whitesmoke;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  color: #008080;
+}
