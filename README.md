@@ -2,6 +2,11 @@
 
 This is our first group project.
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7354d88a9613bd15c06fbd295234224d6bd3b0da
 ## Description 
 
 Your GitHub profile is an extremely important aspect of your public identity as a developer. A well-crafted one allows you to show off your work to other developers as well as potential employers. An important component of your GitHub profile—and one that many new developers often overlook—is the README.md file.
@@ -70,3 +75,7 @@ If you created an application or package and would like other developers to cont
 ## Tests
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them.
+<<<<<<< HEAD
+>>>>>>> cf8396a363cb77e3f1b66f93ba14da1f010922fb
+=======
+>>>>>>> 7354d88a9613bd15c06fbd295234224d6bd3b0da
