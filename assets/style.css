@@ -1,5 +1,6 @@
 
 
+
 html {
     background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
 }
@@ -21,23 +22,24 @@ img {
 
 
 
+
+
 /* Define the main Navigation block */
 .myNav {
-    display: block;
-    height: 50px;
-    line-height: 50px;
-    background-color: whitesmoke;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  background-color: whitesmoke;
 }
 
-/* This is optional, however if you want to display the active link differently apply a background to it */
-.myNav li a.active {
-    background-color: #3786E1;
+
 
 }
 .card {
     align-content: center;
     margin: 300px;
 }
+
 
 header {
   text-align: center;
