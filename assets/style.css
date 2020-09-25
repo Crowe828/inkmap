@@ -7,12 +7,14 @@ html {
 font-size: larger;
 margin-bottom: 40px;
 margin-top: 10px;}
+
 h2 {
   padding-top:80px;
 font-weight: bold;
 padding-bottom: 10px;
 text-align: center;
 color: rgb(152, 125, 201);
+
 }
 /* heading style */
 .blot {
@@ -21,6 +23,7 @@ margin: 0px;
 }
 header {
  margin-right: 180px;
+
 }
 .brain {
   margin: 0px;
@@ -42,11 +45,13 @@ header {
 .copyR{
   color: black;
 }
+
 #tatGun {
   margin-left: 400px;
   height: 300px;
   width: 300px;
 }
+
  .myNav {
   display: block;
   height: 50px;
@@ -59,17 +64,7 @@ header {
 .myNav li a.active {
   background-color: #3786E1;
 }
-.card {
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 0 10px 2px;
-    align-content: center;
-    margin: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+
  .searchCard {
  margin-top: -50px;
  margin-left: 250px;
@@ -78,8 +73,14 @@ header {
  width: 600px;
  }
  .button {
+
   background-color: rgb(152, 125, 201);
+  
  }
+ .button:hover{
+   background-color:#694489
+ }
+
  .button:hover{
    background-color:#694489
  }
