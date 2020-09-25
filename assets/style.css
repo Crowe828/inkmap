@@ -43,15 +43,6 @@ html {
   background-color: #3786E1;
 }
 
-#search-input {
-  width: 400px;
-  height: 40px;
-}
-
-.card {
-  align-content: center;
-  margin: 300px;
-}
 
 /* Displays title of page */
 h1 {
@@ -60,6 +51,7 @@ h1 {
 }
 
 /* Displays a brief explanation of the page */
+.card {
     align-content: center;
     margin: 100px;
     margin-left: 200px;
@@ -67,10 +59,10 @@ h1 {
   
 }
 
-.searchCard {
+/* .searchCard {
   margin-top: 90px;
   margin-left: 70px;
-}
+} */
 
 h2 {
     padding-top:40px;
