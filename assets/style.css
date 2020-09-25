@@ -1,11 +1,9 @@
-/* Image of a brick wall for our page's background */
 html {
   background-size: 1300px;
   background-image: url("./images/White\ Brick\ Background\ Hd\ HD\ Wallpapers\ on\ picsfaircom.png");
 }
-
 .label {
-text-align: center;
+  text-align: center;
 font-size: larger;
 margin-bottom: 40px;
 margin-top: 10px;}
@@ -20,22 +18,16 @@ color: rgb(152, 125, 201);
 }
 /* heading style */
 .blot {
-
 height: 130px;
 margin: 0px;
 }
-
-header { 
-
+header {
  margin-right: 180px;
 
 }
-
 .brain {
   margin: 0px;
-} 
-
-
+}
 /* Footer */
 .toe {
   background-color: whitesmoke;
@@ -54,17 +46,11 @@ header {
   color: black;
 }
 
-
 #tatGun {
   margin-left: 400px;
-
   height: 300px;
   width: 300px;
-
-} 
-
-
-
+}
 
  .myNav {
   display: block;
@@ -72,17 +58,12 @@ header {
   line-height: 50px;
   background-color: whitesmoke;
 }
-
 .main-container {
   margin-bottom: 100px;
-  
 }
-
 .myNav li a.active {
   background-color: #3786E1;
 }
-
-
 
  .searchCard {
  margin-top: -50px;
@@ -91,11 +72,8 @@ header {
  padding-bottom: 50px;
  width: 600px;
  }
-
-
  .button {
-  
-  
+
   background-color: rgb(152, 125, 201);
   
  }
@@ -103,20 +81,15 @@ header {
    background-color:#694489
  }
 
+ .button:hover{
+   background-color:#694489
+ }
 .searchbar {
    margin-top:  10px;
   box-shadow: 0 0 8px 2px;
-
 }
-
-
  #search-input {
 
 
    background-color: white;
- 
  }
-
- 
-
-
