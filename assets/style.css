@@ -70,11 +70,6 @@ text-align: center;
   background-color: #3786E1;
 }
 
-#search-input {
-  width: 400px;
-  height: 40px;
-}
-
 
 .card {
     align-content: center;
@@ -84,9 +79,9 @@ text-align: center;
   
 }
 
-.searchCard {
+/* .searchCard {
   margin-top: 90px;
   margin-left: 70px;
-}
+} */
 
 

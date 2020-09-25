@@ -24,7 +24,15 @@ $(document).ready(function () {
       url: unsplashURL,
       method: "GET",
     }).then(function (response) {
-      console.log(response);
+      var mainContainer = document.querySelector(".main-container");
+      var imageResults = response.results;
+
+      for (let i = 0; i < imageResults.length; i++) {
+        var images = (document.createElement("img").src =
+          imageResults[i].urls.full);
+        mainContainer.append(images);
+        console.log(images);
+      }
     });
   }
 
