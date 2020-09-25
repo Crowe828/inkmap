@@ -83,18 +83,6 @@ header {
 }
 
 
-.card {
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 0 10px 2px;
-    align-content: center;
-    margin: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-  padding-left: 20px;
-  padding-right: 20px;
-
-}
 
  .searchCard {
  margin-top: -50px;
@@ -123,13 +111,11 @@ header {
 
 
  #search-input {
+
+
    background-color: white;
  
  }
-
-
-
-
 
  
 
