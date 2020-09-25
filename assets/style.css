@@ -22,12 +22,16 @@ header {
 text-align: center;
 }
 
+.brain {
+  margin: 0px;
+} 
+
 
 /* Footer */
 .toe {
   background-color: whitesmoke;
   text-align: center;
-  width:100%;
+  width: 100%;
   padding: 15px;
   color: #008080;
   position: fixed;
@@ -37,19 +41,21 @@ text-align: center;
 
 }
 
+
+
+
+
 #tatGun {
   margin-left: 350px;
   margin-bottom: 60px;
   height: 250px;
   width: 250px;
-}
+} 
 
-/* Define the main Navigation block */
-.brain {
-  margin: -40px;
-}
 
-.myNav {
+
+
+ .myNav {
   display: block;
   height: 50px;
   line-height: 50px;
@@ -69,18 +75,8 @@ text-align: center;
   height: 40px;
 }
 
+
 .card {
-  align-content: center;
-  margin: 300px;
-}
-
-/* Displays title of page */
-h1 {
- font-size: 90px;
- font-weight: bolder;
-}
-
-/* Displays a brief explanation of the page */
     align-content: center;
     margin: 100px;
     margin-left: 200px;
