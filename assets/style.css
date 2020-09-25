@@ -4,6 +4,29 @@ html {
     background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
 }
 
+
+
+
+
+h2 {
+  padding-top:40px;
+font-weight: bold;
+
+text-align: center;
+
+}
+
+.blot {
+
+height: 130px;
+margin: 0px;
+}
+
+header {
+ margin-right: 180px;
+text-align: center;
+}
+
 .toe{
     background-color: whitesmoke;
     text-align: center;
@@ -74,21 +97,3 @@ margin-top: 90px;
 
 
 
-h2 {
-    padding-top:40px;
-  font-weight: bold;
-
-  text-align: center;
-
-}
-
-.blot {
-
-  height: 130px;
-  margin: 0px;
-}
-
-header {
-   margin-right: 180px;
-  text-align: center;
-}
