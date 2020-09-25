@@ -3,6 +3,26 @@ html {
   background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
 }
 
+h2 {
+  padding-top:40px;
+font-weight: bold;
+
+text-align: center;
+
+}
+
+.blot {
+
+height: 130px;
+margin: 0px;
+}
+
+header {
+ margin-right: 180px;
+text-align: center;
+}
+
+
 /* Footer */
 .toe {
   background-color: whitesmoke;
@@ -14,6 +34,7 @@ html {
   bottom: 0px;
   left: 0px;
   right: 0px;
+
 }
 
 #tatGun {
@@ -72,20 +93,4 @@ h1 {
   margin-left: 70px;
 }
 
-h2 {
-    padding-top:40px;
-  font-weight: bold;
 
-  text-align: center;
-
-}
-
-.blot {
-  height: 130px;
-  margin: 0px;
-}
-
-header {
-   margin-right: 180px;
-  text-align: center;
-}
