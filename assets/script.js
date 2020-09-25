@@ -28,10 +28,13 @@ $(document).ready(function () {
       var imageResults = response.results;
 
       for (let i = 0; i < imageResults.length; i++) {
-        var images = (document.createElement("img").src =
-          imageResults[i].urls.full);
-        mainContainer.append(images);
-        console.log(images);
+        // Create image tag
+        var image = document.createElement("img");
+        // Set src of image to data url
+        image.setAttribute("src", imageResults[i].urls.full);
+        image.setAttribute("class", "image-gallery");
+        mainContainer.append(image);
+        console.log(image);
       }
     });
   }
