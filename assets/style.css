@@ -73,23 +73,25 @@ header {
  width: 600px;
  }
  .button {
-
   background-color: rgb(152, 125, 201);
-  
  }
  .button:hover{
-   background-color:#694489
+   background-color:#694489;
  }
 
  .button:hover{
-   background-color:#694489
+   background-color:#694489;
  }
 .searchbar {
-   margin-top:  10px;
+  margin-top:  10px;
   box-shadow: 0 0 8px 2px;
 }
  #search-input {
-
-
-   background-color: white;
+  background-color:#694489;
+  color: white;
+ }
+ .spray{
+  font-size: 30px;
+  font-family: 'Special Elite', cursive;
+  color: rgb(152, 125, 201);
  }
