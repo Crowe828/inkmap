@@ -1,23 +1,30 @@
 /* Image of a brick wall for our page's background */
 html {
+  
   background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
 }
+
+.label {
+text-align: center;
+font-size: larger;
+margin-bottom: 40px;}
 
 h2 {
   padding-top:40px;
 font-weight: bold;
-
+padding-bottom: 10px;
 text-align: center;
 
 }
-
+/* heading style */
 .blot {
 
 height: 130px;
 margin: 0px;
 }
 
-header {
+header { 
+
  margin-right: 180px;
 text-align: center;
 }
@@ -32,24 +39,24 @@ text-align: center;
   background-color: whitesmoke;
   text-align: center;
   width: 100%;
-  padding: 15px;
-  color: #008080;
+  padding: 20px;
+  color: rgb(152, 125, 201);
   position: fixed;
   bottom: 0px;
   left: 0px;
   right: 0px;
-
+  border-radius: 5px;
+ 
+  box-shadow: 0 0 10px 2px;
 }
-
-
-
 
 
 #tatGun {
   margin-left: 350px;
-  margin-bottom: 60px;
+
   height: 250px;
   width: 250px;
+
 } 
 
 
@@ -64,6 +71,7 @@ text-align: center;
 
 .main-container {
   margin-bottom: 100px;
+  
 }
 
 .myNav li a.active {
@@ -72,16 +80,33 @@ text-align: center;
 
 
 .card {
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
     align-content: center;
-    margin: 100px;
+    margin: 50px;
     margin-left: 200px;
     margin-right: 200px;
-  
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 
-/* .searchCard {
-  margin-top: 90px;
-  margin-left: 70px;
-} */
+ .searchCard {
+ margin-top: -50px;
+ padding-bottom: 50px;
+ }
 
 
+ .button {
+  margin-top:  10px;
+  box-shadow: 0 0 8px 2px;
+  background-color: rgb(152, 125, 201);
+ }
+
+ #search-input {
+  
+margin-top:  10px;
+  box-shadow: 0 0 10px 2px;
+
+ }
