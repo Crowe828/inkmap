@@ -24,43 +24,45 @@
   <body>
     <!-- Header -->
     <header>
-
-     <img class="blot" src="assets/images/inkblot.png" alt="ink blot">
+      <img class="blot" src="assets/images/inkblot.png" alt="ink blot">
       <a class="brain" href="https://fontmeme.com/tattoo-fonts/"><img src="https://fontmeme.com/permalink/200924/7073db415dae035fe816f0c66a61cf38.png" alt="tattoo-fonts"></a> <a class="brain" href="https://fontmeme.com/sans-serif-fonts/"><img src="https://fontmeme.com/permalink/200924/0138282c7d6f833b2805d448175fd93d.png" alt="sans-serif-fonts" ></a>
-      
-      
-
-
-
     </header>
-
-    <!-- card that holds all content-->
-  <div class="card">
-    <div class="card-block">
-      <h2>
-        Welcome, type in the idea of your tattoo and click submit. <br>
-        We'll provide you with creative images and the nearest tattoo artist near you!
-      </h2>
-      
-     
+    
+    <div class="container main-container">
       <!-- Search bar -->
+<div class="card">
+      <div class="card-block">
+        <h2>
+          Welcome, type in the idea of your tattoo and click submit.
+          <br>
+          We'll provide you with creative images and the nearest tattoo artist near you!
+        </h2>
+        
+             
+    </div>
+    </div>
+      
 <br> <div class="searchCard">
-    <label>Search for Inspiration:</label>
-    <form class="input-group">
-      <input
-        id="search-input"
-        class="form-control"
-        type="text"
-        placeholder="Search"
-      />
-      <div class="input-group-append">
-        <button
-          type="submit"
-          id="search-btn"
-          class="search-btn fas fa-search"
-        ></button>
-      </div>
-    </form>
+     <label class="label is-medium">Search for Inspiration:</label>
+      <form class="searchbar">
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input
+              id="search-input"
+              class="input is-medium"
+              type="text"
+              placeholder="Search"
+            />
+          </div>
+          <div class="control">
+            <button
+              type="submit"
+              id="search-btn"
+              class="button is-medium is-danger search-btn fas fa-syringe"
+            ></button>
+          </div>
+        </div>
+      </form>
     <img id="tatGun" src="assets/images/tattoogun.png" alt="Tattoo Gun"/>
 
     <i class="fas fa-syringe"></i>
@@ -68,8 +70,11 @@
 
 
 
+    
+  
+
     <footer class="toe">
-      <p>InkMap|The Wombats &copy;</p>
+      <p>Inkmap | The Wombats &copy;</p>
     </footer>
 
     <!-- jQuery -->
