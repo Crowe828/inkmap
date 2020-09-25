@@ -1,19 +1,21 @@
 /* Image of a brick wall for our page's background */
 html {
-  
-  background-image: url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/111059/111059_tt.jpg");
+  background-size: 1300px;
+  background-image: url("./images/White\ Brick\ Background\ Hd\ HD\ Wallpapers\ on\ picsfaircom.png");
 }
 
 .label {
 text-align: center;
 font-size: larger;
-margin-bottom: 40px;}
+margin-bottom: 40px;
+margin-top: 10px;}
 
 h2 {
-  padding-top:40px;
+  padding-top:80px;
 font-weight: bold;
 padding-bottom: 10px;
 text-align: center;
+color: rgb(152, 125, 201);
 
 }
 /* heading style */
@@ -26,7 +28,7 @@ margin: 0px;
 header { 
 
  margin-right: 180px;
-text-align: center;
+
 }
 
 .brain {
@@ -46,16 +48,18 @@ text-align: center;
   left: 0px;
   right: 0px;
   border-radius: 5px;
- 
   box-shadow: 0 0 10px 2px;
+}
+.copyR{
+  color: black;
 }
 
 
 #tatGun {
-  margin-left: 350px;
+  margin-left: 400px;
 
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 300px;
 
 } 
 
@@ -94,19 +98,33 @@ text-align: center;
 
  .searchCard {
  margin-top: -50px;
+ margin-left: 250px;
+ margin-right: 250px;
  padding-bottom: 50px;
+ width: 600px;
  }
 
 
  .button {
-  margin-top:  10px;
-  box-shadow: 0 0 8px 2px;
+  
+  
   background-color: rgb(152, 125, 201);
+  
  }
+ .button:hover{
+   background-color:#694489
+ }
+
+.searchbar {
+   margin-top:  10px;
+  box-shadow: 0 0 8px 2px;
+
+}
+
 
  #search-input {
   
-margin-top:  10px;
-  box-shadow: 0 0 10px 2px;
 
+  background-color: white;
+  
  }
