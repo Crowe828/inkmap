@@ -1,9 +1,3 @@
-// Google Places API
-var googleKey = "AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk";
-var googleURL =
-  "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=1500&type=restaurant&keyword=cruise&key=" +
-  googleKey;
-
 $(document).ready(function () {
   $("#search-btn").on("click", function (event) {
     event.preventDefault();
@@ -38,12 +32,17 @@ $(document).ready(function () {
       }
     });
   }
+  // Google Places API
+  var googleKey = "AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk";
+  var googleURL =
+    "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=28.5492,-81.3798&radius=32186.9&keyword=tattoo&key=" +
+    googleKey;
 
   // Retrieving Google Places API info
-  // $.ajax({
-  //   url: googleURL,
-  //   method: "GET",
-  // }).then(function (response) {
-  //   console.log(response);
-  // });
+  $.ajax({
+    url: googleURL,
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
+  });
 });
