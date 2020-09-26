@@ -4,26 +4,25 @@ html {
 }
 .label {
   text-align: center;
-font-size: larger;
-margin-bottom: 40px;
-margin-top: 10px;}
+  font-size: larger;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
 
 h2 {
-  padding-top:80px;
-font-weight: bold;
-padding-bottom: 10px;
-text-align: center;
-color: rgb(152, 125, 201);
-
+  padding-top: 80px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-align: center;
+  color: rgb(152, 125, 201);
 }
 /* heading style */
 .blot {
-height: 130px;
-margin: 0px;
+  height: 130px;
+  margin: 0px;
 }
 header {
- margin-right: 180px;
-
+  margin-right: 180px;
 }
 .brain {
   margin: 0px;
@@ -42,7 +41,7 @@ header {
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
 }
-.copyR{
+.copyR {
   color: black;
 }
 
@@ -52,7 +51,7 @@ header {
   width: 300px;
 }
 
- .myNav {
+.myNav {
   display: block;
   height: 50px;
   line-height: 50px;
@@ -62,42 +61,44 @@ header {
   margin-bottom: 100px;
 }
 .myNav li a.active {
-  background-color: #3786E1;
+  background-color: #3786e1;
 }
 
- .searchCard {
- margin-top: -50px;
- margin-left: 250px;
- margin-right: 250px;
- padding-bottom: 50px;
- width: 600px;
- }
- .button {
-
+.searchCard {
+  margin-top: -50px;
+  margin-left: 250px;
+  margin-right: 250px;
+  padding-bottom: 50px;
+  width: 600px;
+}
+.button {
   background-color: rgb(152, 125, 201);
-  
- }
- .button:hover{
-   background-color:#694489
- }
+}
+.button:hover {
+  background-color: #694489;
+}
 
- .button:hover{
-   background-color:#694489
- }
+.button:hover {
+  background-color: #694489;
+}
 .searchbar {
-   margin-top:  10px;
+  margin-top: 10px;
   box-shadow: 0 0 8px 2px;
 }
- #search-input {
 
- }
-
-
- .spray{
-
+#search-input {
+  background-color: #694489;
+  color: white;
+}
+.spray {
   font-size: 30px;
- 
-  font-family: 'Special Elite', cursive;
-   color: rgb(152, 125, 201);
-   
- }
+  font-family: "Special Elite", cursive;
+  color: rgb(152, 125, 201);
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+}
+
