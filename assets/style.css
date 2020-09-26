@@ -100,3 +100,13 @@ header {
   height: 400px; /* The height is 400 pixels */
   width: 100%; /* The width is the width of the web page */
 }
+
+.inksplat {
+  width: 280px;
+  height: auto;
+}
+
+.blot2 {
+  width: 150px;
+  height: auto;
+}
