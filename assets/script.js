@@ -32,6 +32,7 @@ $(document).ready(function () {
       }
     });
   }
+
   // Google Places API
   var googleKey = "AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk";
   var googleURL =
@@ -43,6 +44,6 @@ $(document).ready(function () {
     url: googleURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
+    console.log(response.results);
   });
 });
