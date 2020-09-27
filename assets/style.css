@@ -1,17 +1,24 @@
 html {
-  background-size: 1300px;
-  background-image: url("./images/White\ Brick\ Background\ Hd\ HD\ Wallpapers\ on\ picsfaircom.png");
+  background-size: 800px;
+  background-image: url("https://waglerbadenhop.com/wp-content/uploads/2018/07/White-Brick-Wall-Background.jpg");
 }
 .label {
   text-align: center;
   font-size: larger;
-  margin-bottom: 40px;
-  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-top: 15px;
 }
-
+header {
+  align-content: center;
+  padding-left: 300px;
+  
+  
+}
 h2 {
-  padding-top: 80px;
+  
+  padding-top: 20px;
   font-weight: bold;
+  
   padding-bottom: 10px;
   text-align: center;
   color: rgb(152, 125, 201);
@@ -21,9 +28,8 @@ h2 {
   height: 130px;
   margin: 0px;
 }
-header {
-  margin-right: 180px;
-}
+
+
 .brain {
   margin: 0px;
 }
@@ -33,13 +39,11 @@ header {
   text-align: center;
   width: 100%;
   padding: 20px;
-  color: rgb(152, 125, 201);
+  color:black;
   position: fixed;
   bottom: 0px;
-  left: 0px;
-  right: 0px;
-  border-radius: 5px;
   box-shadow: 0 0 10px 2px;
+  z-index: auto;
 }
 .copyR {
   color: black;
@@ -59,40 +63,42 @@ header {
 }
 .main-container {
   margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
 }
 .myNav li a.active {
   background-color: #3786e1;
 }
 
 .searchCard {
-  margin-top: -50px;
+  margin-top: 60px;
   margin-left: 250px;
   margin-right: 250px;
   padding-bottom: 50px;
   width: 600px;
 }
 .button {
-  background-color: rgb(152, 125, 201);
+  background-color: red;
 }
 .button:hover {
-  background-color: #694489;
+  background-color: #990707;
 }
 
-.button:hover {
-  background-color: #694489;
-}
+
 .searchbar {
   margin-top: 10px;
   box-shadow: 0 0 8px 2px;
+  color: red;
 }
 #search-input {
-  background-color: #694489;
-  color: white;
+  background-color: white;
+  color: black;
 }
 .spray {
   font-size: 30px;
-  font-family: "Special Elite", cursive;
-  color: rgb(152, 125, 201);
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: black;
 }
 
 /* Set the size of the div element that contains the map */
