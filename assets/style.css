@@ -1,28 +1,20 @@
-html {
-  background-size: 800px;
-  background-image: url("https://waglerbadenhop.com/wp-content/uploads/2018/07/White-Brick-Wall-Background.jpg");
+
+/*1st page background*/
+.hero-image {
+  padding: 270px;
+  height: 800px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("./images/herotattoo.jpeg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 }
 
-.label {
-  text-align: center;
-  font-size: larger;
-  margin-bottom: 50px;
-  margin-top: 15px;
-}
-header {
-  align-content: center;
-  padding-left: 300px;
-  
-  
-}
-h2 {
-  
-  padding-top: 20px;
-  font-weight: bold;
-  
-  padding-bottom: 10px;
-  text-align: center;
-  color: rgb(152, 125, 201);
+/*2nd page background */
+.brick {
+  background-size: 800px;
+  background-image: url("https://waglerbadenhop.com/wp-content/uploads/2018/07/White-Brick-Wall-Background.jpg");
 }
 
 /* heading style */
@@ -30,39 +22,15 @@ h2 {
   height: 130px;
   margin: 0px;
 }
-
-
-
-.brain {
-  margin: 0px;
-}
-/* Footer */
-.toe {
-  background-color: whitesmoke;
-  text-align: center;
-  width: 100%;
-  padding: 20px;
-  color:black;
-  position: fixed;
-  bottom: 0px;
-  box-shadow: 0 0 10px 2px;
-  z-index: auto;
-}
-.copyR {
-  color: black;
+.whiteblot {
+  height: 230px;
+  width: 230px;
+  margin: -40px;
 }
 
-#tatGun {
-  margin-left: 400px;
-  height: 300px;
-  width: 300px;
-}
-
-.myNav {
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  background-color: whitesmoke;
+header {
+  align-content: center;
+  padding-left: 300px;
 }
 .main-container {
   margin-bottom: 100px;
@@ -70,10 +38,15 @@ h2 {
   margin-right: 100px;
   margin-top: 100px;
 }
-.myNav li a.active {
-  background-color: #3786e1;
+/*h2*/
+.spray {
+  font-size: 30px;
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: black;
+  text-align: center;
 }
 
+/* search bar */
 .searchCard {
   margin-top: 60px;
   margin-left: 250px;
@@ -81,6 +54,23 @@ h2 {
   padding-bottom: 50px;
   width: 600px;
 }
+.label {
+  text-align: center;
+  font-size: larger;
+  margin-bottom: 50px;
+  margin-top: 15px;
+}
+.searchbar {
+  margin-top: 10px;
+  box-shadow: 0 0 8px 2px;
+  color: red;
+}
+
+#search-input {
+  background-color: white;
+  color: black;
+}
+
 .button {
   background-color: red;
 }
@@ -88,20 +78,10 @@ h2 {
   background-color: #990707;
 }
 
-
-.searchbar {
-  margin-top: 10px;
-  box-shadow: 0 0 8px 2px;
-  color: red;
-}
-#search-input {
-  background-color: white;
-  color: black;
-}
-.spray {
-  font-size: 30px;
-  font-family: 'Sedgwick Ave Display', cursive;
-  color: black;
+#tatGun {
+  margin-left: 400px;
+  height: 300px;
+  width: 300px; 
 }
 
 /* Set the size of the div element that contains the map */
@@ -151,4 +131,23 @@ p {
 a {
   text-decoration: none;
   color: darkslategrey;
+}
+
+/* Footer */
+.toe {
+  background-color: whitesmoke;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  color: black;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+}
+.copyR {
+  font-weight: bold;
+  color:  black;
 }
