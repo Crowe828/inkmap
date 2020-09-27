@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inkmap</title>
 
-    <style>
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px; /* The height is 400 pixels */
-        width: 100%; /* The width is the width of the web page */
-      }
-    </style>
     <!-- Bulma.io Framework -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
     />
-   
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
     <!-- Font Awesome  -->
     <script
       src="https://kit.fontawesome.com/f4677e3cb7.js"
@@ -45,14 +41,11 @@
 
     <div class="container main-container">
       <!-- Search bar -->
+      
       <h2 class="spray">
-        Welcome, type in the idea of your tattoo and click submit. We'll provide
+        Welcome, type in the idea of your tattoo and click submit. <br>We'll provide
         you with creative images and the nearest tattoo artist near you!
       </h2>
-
-      <img id="tatGun" src="assets/images/tattoogun.png" alt="Tattoo Gun" />
-
-      <br />
 
       <div class="searchCard">
         <label class="label is-medium">Search for Inspiration:</label>
@@ -75,39 +68,228 @@
             </div>
           </div>
         </form>
+        <div></div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <img id="tatGun" src="./assets/images/clipart2935492.png" alt="Tattoo Gun" />
       </div>
+      <!-- The slide-out panel for showing place details -->
+      <div id="panel"></div>
       <div id="map"></div>
     </div>
-
+    
     <footer class="toe">
-      <p>Inkmap | The Wombats &copy;</p>
+      <p class="copyR"> Inkmap | The Wombats &copy;</p>
     </footer>
 
     <!-- Script to display Map -->
     <script>
-      // Initialize and add the map
+      let pos;
+      let map;
+      let bounds;
+      let infoWindow;
+      let currentInfoWindow;
+      let service;
+      let infoPane;
       function initMap() {
-        // The location of Orlando
-        var orlando = { lat: 28.5492, lng: -81.3798 };
-        var chiTattoo = { lat: 28.6180597, lng: -81.3118087 };
-        // The map, centered at Orlando
-        var map = new google.maps.Map(document.getElementById("map"), {
+        // Initialize variables
+        bounds = new google.maps.LatLngBounds();
+        infoWindow = new google.maps.InfoWindow();
+        currentInfoWindow = infoWindow;
+        infoPane = document.getElementById("panel");
+
+        // Try HTML5 geolocation
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              };
+              map = new google.maps.Map(document.getElementById("map"), {
+                center: pos,
+                zoom: 10,
+              });
+
+              bounds.extend(pos);
+              infoWindow.setPosition(pos);
+              infoWindow.setContent("Location found.");
+              infoWindow.open(map);
+              map.setCenter(pos);
+
+              // Call Places Nearby Search on user's location
+              getNearbyPlaces(pos);
+            },
+            () => {
+              // Browser supports geolocation, but user has denied permission
+              handleLocationError(true, infoWindow);
+            }
+          );
+        } else {
+          // Browser doesn't support geolocation
+          handleLocationError(false, infoWindow);
+        }
+      }
+
+      // Handle a geolocation error
+      function handleLocationError(browserHasGeolocation, infoWindow) {
+        // Set default location to Orlando, Florida
+        pos = { lat: 28.5492, lng: -81.3798 };
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: pos,
           zoom: 10,
-          center: orlando,
         });
-        // The marker, positioned at Orlando
-        var marker = new google.maps.Marker({ position: orlando, map: map });
-        var chiTattooMarker = new google.maps.Marker({
-          position: chiTattoo,
-          map: map,
+
+        // Display an InfoWindow at the map center
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(
+          browserHasGeolocation
+            ? "Geolocation permissions denied. Using default location."
+            : "Error: Your browser doesn't support geolocation."
+        );
+
+        infoWindow.open(map);
+        currentInfoWindow = infoWindow;
+
+        // Call Places Nearby Search on the default location
+        getNearbyPlaces(pos);
+      }
+
+      // Perform a Places Nearby Search Request
+      function getNearbyPlaces(position) {
+        let request = {
+          location: position,
+          rankBy: google.maps.places.RankBy.DISTANCE,
+          keyword: "tattoo",
+        };
+
+        service = new google.maps.places.PlacesService(map);
+        service.nearbySearch(request, nearbyCallback);
+      }
+
+      // Handle the results of the Nearby Search
+      function nearbyCallback(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          createMarkers(results);
+        }
+      }
+
+      // Set markers at the location of each place result
+      function createMarkers(places) {
+        places.forEach((place) => {
+          let marker = new google.maps.Marker({
+            position: place.geometry.location,
+            map: map,
+            title: place.name,
+          });
+
+          // Add click listener to each marker
+          google.maps.event.addListener(marker, "click", () => {
+            let request = {
+              placeId: place.place_id,
+              fields: [
+                "name",
+                "formatted_address",
+                "geometry",
+                "rating",
+                "website",
+                "photos",
+              ],
+            };
+            // Only fetch the details of a place when the user clicks on a marker. If we fetch the details for all place results as soon as we get the search response, we will hit API rate limits.
+            service.getDetails(request, (placeResult, status) => {
+              showDetails(placeResult, marker, status);
+            });
+          });
+          // Adjust the map bounds to include the location of this marker
+          bounds.extend(place.geometry.location);
         });
+        // Once all the markers have been placed, adjust the bounds of the map to show all the markers within the visible area.
+        map.fitBounds(bounds);
+      }
+
+      // Builds an InfoWindow to display details above the marker
+      function showDetails(placeResult, marker, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          let placeInfowindow = new google.maps.InfoWindow();
+          placeInfowindow.setContent(
+            "<div><strong>" +
+              placeResult.name +
+              "</strong><br>" +
+              "Rating: " +
+              placeResult.rating +
+              "</div>"
+          );
+          placeInfowindow.open(marker.map, marker);
+          currentInfoWindow.close();
+          currentInfoWindow = placeInfowindow;
+          showPanel(placeResult);
+        } else {
+          console.log("showDetails failed: " + status);
+        }
+      }
+
+      function showPanel(placeResult) {
+        // If infoPane is already open, close it
+        if (infoPane.classList.contains("open")) {
+          infoPane.classList.remove("open");
+        }
+
+        // Clear the previous details
+        while (infoPane.lastChild) {
+          infoPane.removeChild(infoPane.lastChild);
+        }
+
+        // Add the primary photo, if there is one
+        if (placeResult.photos != null) {
+          let firstPhoto = placeResult.photos[0];
+          let photo = document.createElement("img");
+          photo.classList.add("hero");
+          photo.src = firstPhoto.getUrl();
+          infoPane.appendChild(photo);
+        }
+
+        // Add place details with text formatting
+        let name = document.createElement("h1");
+        name.classList.add("place");
+        name.textContent = placeResult.name;
+        infoPane.appendChild(name);
+        if (placeResult.rating != null) {
+          let rating = document.createElement("p");
+          rating.classList.add("details");
+          rating.textContent = `Rating: ${placeResult.rating} \u272e`;
+          infoPane.appendChild(rating);
+        }
+
+        let address = document.createElement("p");
+        address.classList.add("details");
+        address.textContent = placeResult.formatted_address;
+        infoPane.appendChild(address);
+        if (placeResult.website) {
+          let websitePara = document.createElement("p");
+          let websiteLink = document.createElement("a");
+          let websiteUrl = document.createTextNode(placeResult.website);
+          websiteLink.appendChild(websiteUrl);
+          websiteLink.title = placeResult.website;
+          websiteLink.href = placeResult.website;
+          websitePara.appendChild(websiteLink);
+          infoPane.appendChild(websitePara);
+        }
+
+        // Open the infoPane
+        infoPane.classList.add("open");
       }
     </script>
+
     <!-- Google Maps API -->
+    <!-- API Key: AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk -->
+    <!-- Orlando coordinates: lat: 28.5492, lng: -81.3798 -->
     <script
+      async
       defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk&libraries=places&callback=initMap"
     ></script>
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Custom Script  -->

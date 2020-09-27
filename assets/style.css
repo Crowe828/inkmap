@@ -1,3 +1,4 @@
+
 /*1st page background*/
 .hero-image {
   padding: 270px;
@@ -12,32 +13,42 @@
 
 /*2nd page background */
 .brick {
-  background-size: 1300px;
-  background-image: url("./images/White\ Brick\ Background\ Hd\ HD\ Wallpapers\ on\ picsfaircom.png");
+  background-size: 800px;
+  background-image: url("https://waglerbadenhop.com/wp-content/uploads/2018/07/White-Brick-Wall-Background.jpg");
 }
 
 /* heading style */
-
-
 .blot {
+  height: 130px;
+  margin: 0px;
+}
+.whiteblot {
   height: 230px;
   width: 230px;
   margin: -40px;
 }
 
+header {
+  align-content: center;
+  padding-left: 300px;
+}
 .main-container {
   margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
 }
-/* h2*/
+/*h2*/
 .spray {
   font-size: 30px;
-  font-family: "Special Elite", cursive;
-  color: rgb(152, 125, 201);
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: black;
+  text-align: center;
 }
 
 /* search bar */
 .searchCard {
-  margin-top: -50px;
+  margin-top: 60px;
   margin-left: 250px;
   margin-right: 250px;
   padding-bottom: 50px;
@@ -46,38 +57,80 @@
 .label {
   text-align: center;
   font-size: larger;
-  margin-bottom: 40px;
-  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-top: 15px;
 }
-
-
-
 .searchbar {
   margin-top: 10px;
   box-shadow: 0 0 8px 2px;
+  color: red;
 }
 
 #search-input {
-  background-color: #694489;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .button {
-  background-color: rgb(152, 125, 201);
+  background-color: red;
 }
 .button:hover {
-  background-color: #694489;
+  background-color: #990707;
 }
+
 #tatGun {
   margin-left: 400px;
   height: 300px;
-  width: 300px;
+  width: 300px; 
 }
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 400px; /* The height is 400 pixels */
-  width: 100%; /* The width is the width of the web page */
+  height: 400px;
+  width: auto;
+  margin-bottom: 200px;
+}
+
+#panel {
+  height: 400px;
+  width: null;
+  color: darkslategrey;
+  background-color: lightgrey;
+  float: left;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: all 0.2s ease-out;
+  border-radius: 15px 0px 0px 15px;
+  font-size: smaller;
+  margin-bottom: 200px;
+}
+
+.open {
+  width: 250px;
+}
+
+/* Styling for place details */
+.hero {
+  width: 100%;
+  height: auto;
+  max-height: 166px;
+  display: block;
+}
+
+.place,
+p {
+  font-family: "Special Elite", cursive;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+.details {
+  color: darkslategrey;
+}
+
+a {
+  text-decoration: none;
+  color: darkslategrey;
 }
 
 /* Footer */

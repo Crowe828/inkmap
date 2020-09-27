@@ -32,18 +32,4 @@ $(document).ready(function () {
       }
     });
   }
-
-  // Google Places API
-  var googleKey = "AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk";
-  var googleURL =
-    "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=28.5492,-81.3798&radius=32186.9&keyword=tattoo&key=" +
-    googleKey;
-
-  // Retrieving Google Places API info
-  $.ajax({
-    url: googleURL,
-    method: "GET",
-  }).then(function (response) {
-    console.log(response.results);
-  });
 });
