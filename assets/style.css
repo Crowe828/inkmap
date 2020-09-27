@@ -2,6 +2,7 @@ html {
   background-size: 800px;
   background-image: url("https://waglerbadenhop.com/wp-content/uploads/2018/07/White-Brick-Wall-Background.jpg");
 }
+
 .label {
   text-align: center;
   font-size: larger;
@@ -23,11 +24,13 @@ h2 {
   text-align: center;
   color: rgb(152, 125, 201);
 }
+
 /* heading style */
 .blot {
   height: 130px;
   margin: 0px;
 }
+
 
 
 .brain {
@@ -103,6 +106,49 @@ h2 {
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 400px; /* The height is 400 pixels */
-  width: 100%; /* The width is the width of the web page */
+  height: 400px;
+  width: auto;
+  margin-bottom: 200px;
+}
+
+#panel {
+  height: 400px;
+  width: null;
+  color: darkslategrey;
+  background-color: lightgrey;
+  float: left;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: all 0.2s ease-out;
+  border-radius: 15px 0px 0px 15px;
+  font-size: smaller;
+  margin-bottom: 200px;
+}
+
+.open {
+  width: 250px;
+}
+
+/* Styling for place details */
+.hero {
+  width: 100%;
+  height: auto;
+  max-height: 166px;
+  display: block;
+}
+
+.place,
+p {
+  font-family: "Special Elite", cursive;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+.details {
+  color: darkslategrey;
+}
+
+a {
+  text-decoration: none;
+  color: darkslategrey;
 }
