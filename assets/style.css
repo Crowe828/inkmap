@@ -15,15 +15,7 @@ header {
   
   
 }
-h2 {
-  
-  padding-top: 20px;
-  font-weight: bold;
-  
-  padding-bottom: 10px;
-  text-align: center;
-  color: rgb(152, 125, 201);
-}
+
 
 /* heading style */
 .blot {
@@ -33,15 +25,13 @@ h2 {
 
 
 
-.brain {
-  margin: 0px;
-}
+
 /* Footer */
 .toe {
   background-color: whitesmoke;
   text-align: center;
   width: 100%;
-  padding: 20px;
+ 
   color:black;
   position: fixed;
   bottom: 0px;
@@ -50,6 +40,7 @@ h2 {
 }
 .copyR {
   color: black;
+  
 }
 
 #tatGun {
