@@ -1,6 +1,47 @@
-html {
+/*1st page background*/
+.hero-image {
+  padding: 270px;
+  height: 800px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("./images/herotattoo.jpeg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+/*2nd page background */
+.brick {
   background-size: 1300px;
   background-image: url("./images/White\ Brick\ Background\ Hd\ HD\ Wallpapers\ on\ picsfaircom.png");
+}
+
+/* heading style */
+
+
+.blot {
+  height: 230px;
+  width: 230px;
+  margin: -40px;
+}
+
+.main-container {
+  margin-bottom: 100px;
+}
+/* h2*/
+.spray {
+  font-size: 30px;
+  font-family: "Special Elite", cursive;
+  color: rgb(152, 125, 201);
+}
+
+/* search bar */
+.searchCard {
+  margin-top: -50px;
+  margin-left: 250px;
+  margin-right: 250px;
+  padding-bottom: 50px;
+  width: 600px;
 }
 .label {
   text-align: center;
@@ -9,78 +50,8 @@ html {
   margin-top: 10px;
 }
 
-h2 {
-  padding-top: 80px;
-  font-weight: bold;
-  padding-bottom: 10px;
-  text-align: center;
-  color: rgb(152, 125, 201);
-}
-/* heading style */
-.blot {
-  height: 130px;
-  margin: 0px;
-}
-header {
-  margin-right: 180px;
-}
-.brain {
-  margin: 0px;
-}
-/* Footer */
-.toe {
-  background-color: whitesmoke;
-  text-align: center;
-  width: 100%;
-  padding: 20px;
-  color: rgb(152, 125, 201);
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 2px;
-}
-.copyR {
-  color: black;
-}
 
-#tatGun {
-  margin-left: 400px;
-  height: 300px;
-  width: 300px;
-}
 
-.myNav {
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  background-color: whitesmoke;
-}
-.main-container {
-  margin-bottom: 100px;
-}
-.myNav li a.active {
-  background-color: #3786e1;
-}
-
-.searchCard {
-  margin-top: -50px;
-  margin-left: 250px;
-  margin-right: 250px;
-  padding-bottom: 50px;
-  width: 600px;
-}
-.button {
-  background-color: rgb(152, 125, 201);
-}
-.button:hover {
-  background-color: #694489;
-}
-
-.button:hover {
-  background-color: #694489;
-}
 .searchbar {
   margin-top: 10px;
   box-shadow: 0 0 8px 2px;
@@ -90,10 +61,17 @@ header {
   background-color: #694489;
   color: white;
 }
-.spray {
-  font-size: 30px;
-  font-family: "Special Elite", cursive;
-  color: rgb(152, 125, 201);
+
+.button {
+  background-color: rgb(152, 125, 201);
+}
+.button:hover {
+  background-color: #694489;
+}
+#tatGun {
+  margin-left: 400px;
+  height: 300px;
+  width: 300px;
 }
 
 /* Set the size of the div element that contains the map */
@@ -102,3 +80,21 @@ header {
   width: 100%; /* The width is the width of the web page */
 }
 
+/* Footer */
+.toe {
+  background-color: whitesmoke;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  color: black;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+}
+.copyR {
+  font-weight: bold;
+  color:  black;
+}
