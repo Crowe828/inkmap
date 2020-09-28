@@ -1,4 +1,3 @@
-
 /*1st page background*/
 .hero-image {
   padding: 270px;
@@ -16,7 +15,7 @@
 
 /*2nd page background */
 .brick {
-  background-size: 800px;
+  background-size: 100%;
   background-image: url("https://waglerbadenhop.com/wp-content/uploads/2018/07/White-Brick-Wall-Background.jpg");
 }
 
@@ -36,15 +35,17 @@ header {
   padding-left: 300px;
 }
 .main-container {
-  margin-bottom: 100px;
+  text-align: center;
+  margin-bottom: 65px;
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 100px;
 }
 /*h2*/
 .spray {
-  font-size: 30px;
-  font-family: 'Sedgwick Ave Display', cursive;
+  margin-top: 120px;
+  font-size: 36px;
+  font-family: "Sedgwick Ave Display", cursive;
   color: black;
   text-align: center;
 }
@@ -67,11 +68,7 @@ header {
   margin-top: 10px;
   box-shadow: 0 0 8px 2px;
   color: red;
-}
-
-#search-input {
-  background-color: white;
-  color: black;
+  border-radius: 5px 5px 5px 5px;
 }
 #searchLink {
   margin-top: 200px;
@@ -84,23 +81,56 @@ header {
 .button {
   background-color: red;
 }
+
 .button:hover {
   background-color: #990707;
 }
 
+/* Footer */
+.toe {
+  background-color: whitesmoke;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  color: black;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+}
+.copyR {
+  font-weight: bold;
+  color: black;
+}
+
+#search-input {
+  background-color: white;
+  color: black;
+}
+
+/* "Gallery" image */
 #tatGun {
-  margin-left: 400px;
-  height: 300px;
-  width: 300px; 
+  margin-top: 50px;
+}
+
+/* Google Maps API from here on down */
+/* Giving the map some styling so it doesn't look 2-D */
+.google-maps {
+  border: rgb(110, 110, 110);
+  box-shadow: 0 0 8px 2px;
+  border-style: solid;
+  border-width: 1px;
 }
 
 /* Set the size of the div element that contains the map */
 #map {
   height: 400px;
   width: auto;
-  margin-bottom: 200px;
 }
 
+/* Panel that displays all of the info about local tattoo shops */
 #panel {
   height: 400px;
   width: null;
@@ -110,11 +140,11 @@ header {
   z-index: 1;
   overflow-x: hidden;
   transition: all 0.2s ease-out;
-  border-radius: 15px 0px 0px 15px;
   font-size: smaller;
   margin-bottom: 200px;
 }
 
+/* Only when the panel is open */
 .open {
   width: 250px;
 }
@@ -141,23 +171,4 @@ p {
 a {
   text-decoration: none;
   color: darkslategrey;
-}
-
-/* Footer */
-.toe {
-  background-color: whitesmoke;
-  text-align: center;
-  width: 100%;
-  padding: 20px;
-  color: black;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 2px;
-}
-.copyR {
-  font-weight: bold;
-  color:  black;
 }
