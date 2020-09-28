@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inkmap | Search</title>
+    <title>Inkmap</title>
 
     <!-- Bulma.io Framework -->
     <link
@@ -12,10 +12,7 @@
     />
 
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 
     <!-- Font Awesome  -->
     <script
@@ -26,11 +23,9 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
-  <!-- Background image is bricks -->
   <body class="brick">
     <!-- Header -->
     <header>
-      <!-- InkMap logo, smaller than on first page -->
       <img class="blot" src="assets/images/inkblot.png" alt="ink blot" />
       <a class="brain" href="https://fontmeme.com/tattoo-fonts/"
         ><img
@@ -44,15 +39,16 @@
       /></a>
     </header>
 
-    <!-- Everything is within this -->
     <div class="container main-container">
-      <!-- An explanation of how to use this site -->
+      <!-- Search bar -->
+      <div class="row">
       <h2 class="spray">
-        Welcome, type in the idea of your tattoo and click submit. <br />We'll
-        provide you with creative images and the nearest tattoo artist near you!
+        Welcome, type in the idea of your tattoo and click submit. <br>We'll provide
+        you with creative images and the nearest tattoo artist near you!
       </h2>
-      <!-- Searchbar -->
+
       <div class="searchCard">
+        <label class="label is-medium">Search for Inspiration:</label>
         <form class="searchbar">
           <div class="field has-addons">
             <div class="control is-expanded">
@@ -60,11 +56,10 @@
                 id="search-input"
                 class="input is-medium"
                 type="text"
-                placeholder="Search for Inspiration"
+                placeholder="Search"
               />
             </div>
             <div class="control">
-              <!-- Button when clicked displays images relating to the keyword entered -->
               <button
                 type="submit"
                 id="search-btn"
@@ -73,28 +68,21 @@
             </div>
           </div>
         </form>
+        <div></div>
       </div>
-      <!-- Google Maps -->
-      <div class="google-maps">
-        <!-- Google Places info -->
-        <div id="panel"></div>
-        <!-- The actual map -->
-        <div id="map"></div>
+       
+        <img id="tatGun" src="./assets/images/clipart2935492.png" alt="Tattoo Gun" />
       </div>
-      <!-- "Gallery" image, generated images are displayed below here-->
-      <img
-        id="tatGun"
-        src="./assets/images/clipart2935492.png"
-        alt="Tattoo Gun"
-      />
+      <!-- The slide-out panel for showing place details -->
+      <div id="panel"></div>
+      <div id="map"></div>
     </div>
-    <!-- Footer -->
+    
     <footer class="toe">
-      <h4 class="copyR">Inkmap | The Wombats &copy;</h4>
+      <h4 class="copyR"> Inkmap | The Wombats &copy;</h4>
     </footer>
 
-    <!-- Script to display Google Maps -->
-    <!-- This was writtien in the HTML file because the directions which Google has available demonstrates it this way -->
+    <!-- Script to display Map -->
     <script>
       let pos;
       let map;
@@ -104,13 +92,13 @@
       let service;
       let infoPane;
       function initMap() {
-        // Initializing variables
+        // Initialize variables
         bounds = new google.maps.LatLngBounds();
         infoWindow = new google.maps.InfoWindow();
         currentInfoWindow = infoWindow;
         infoPane = document.getElementById("panel");
 
-        // Geolocation
+        // Try HTML5 geolocation
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -129,11 +117,11 @@
               infoWindow.open(map);
               map.setCenter(pos);
 
-              // Display places near the user
+              // Call Places Nearby Search on user's location
               getNearbyPlaces(pos);
             },
             () => {
-              // Browser supports geolocation, but user denies permission
+              // Browser supports geolocation, but user has denied permission
               handleLocationError(true, infoWindow);
             }
           );
@@ -143,7 +131,7 @@
         }
       }
 
-      // If there is a geolocation error
+      // Handle a geolocation error
       function handleLocationError(browserHasGeolocation, infoWindow) {
         // Set default location to Orlando, Florida
         pos = { lat: 28.5492, lng: -81.3798 };
@@ -152,7 +140,7 @@
           zoom: 10,
         });
 
-        // If there is an error, let the user know
+        // Display an InfoWindow at the map center
         infoWindow.setPosition(pos);
         infoWindow.setContent(
           browserHasGeolocation
@@ -163,11 +151,11 @@
         infoWindow.open(map);
         currentInfoWindow = infoWindow;
 
-        // Display places in Orlando, Florida
+        // Call Places Nearby Search on the default location
         getNearbyPlaces(pos);
       }
 
-      // Search for nearby palces
+      // Perform a Places Nearby Search Request
       function getNearbyPlaces(position) {
         let request = {
           location: position,
@@ -179,14 +167,14 @@
         service.nearbySearch(request, nearbyCallback);
       }
 
-      // Handle the results of the search
+      // Handle the results of the Nearby Search
       function nearbyCallback(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
           createMarkers(results);
         }
       }
 
-      // Set a marker at each location
+      // Set markers at the location of each place result
       function createMarkers(places) {
         places.forEach((place) => {
           let marker = new google.maps.Marker({
@@ -208,7 +196,7 @@
                 "photos",
               ],
             };
-            // Only fetch the details of a place when the user clicks on a marker
+            // Only fetch the details of a place when the user clicks on a marker. If we fetch the details for all place results as soon as we get the search response, we will hit API rate limits.
             service.getDetails(request, (placeResult, status) => {
               showDetails(placeResult, marker, status);
             });
@@ -220,7 +208,7 @@
         map.fitBounds(bounds);
       }
 
-      // Displays details above the marker
+      // Builds an InfoWindow to display details above the marker
       function showDetails(placeResult, marker, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
           let placeInfowindow = new google.maps.InfoWindow();
@@ -252,7 +240,7 @@
           infoPane.removeChild(infoPane.lastChild);
         }
 
-        // Display a photo in the info panel if there is one
+        // Add the primary photo, if there is one
         if (placeResult.photos != null) {
           let firstPhoto = placeResult.photos[0];
           let photo = document.createElement("img");
@@ -295,6 +283,7 @@
 
     <!-- Google Maps API -->
     <!-- API Key: AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk -->
+    <!-- Orlando coordinates: lat: 28.5492, lng: -81.3798 -->
     <script
       async
       defer
@@ -303,7 +292,6 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <!-- Custom Script  -->
     <script src="assets/script.js"></script>
   </body>
