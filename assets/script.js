@@ -1,8 +1,12 @@
+// JavaScript for Unsplash
 $(document).ready(function () {
   $("#search-btn").on("click", function (event) {
     event.preventDefault();
+    // What the user searches for
     var searchInput = $("#search-input").val().trim();
-    unsplash(searchInput);
+    // What the user searches for plus the word tattoo, so the search is always related to tattoos
+    var searchPlusTattoos = searchInput + " tattoo";
+    unsplash(searchPlusTattoos);
   });
 
   function unsplash(search) {
@@ -21,6 +25,7 @@ $(document).ready(function () {
       var mainContainer = document.querySelector(".main-container");
       var imageResults = response.results;
 
+      // Display every image generated from the search
       for (let i = 0; i < imageResults.length; i++) {
         // Create image tag
         var image = document.createElement("img");
@@ -28,7 +33,6 @@ $(document).ready(function () {
         image.setAttribute("src", imageResults[i].urls.full);
         image.setAttribute("class", "image-gallery");
         mainContainer.append(image);
-        console.log(image);
       }
     });
   }
