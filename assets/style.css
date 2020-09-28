@@ -77,7 +77,6 @@ main{
 }
 .searchCard {
   margin-top: 50px;
-  
   width: 600px;
  
 }
@@ -97,14 +96,18 @@ margin-left: -200px;
   border-radius: 5px 5px 5px 5px;
 }
 /*search button*/
+#searchLink {
+  margin-top: 200px;
+  bottom: 0px;
+  width:100%;
+  align-content: center;
+}
 .button {
   background-color: chocolate;
 }
-
 .button:hover {
   background-color: darkred;
 }
-
 /* Footer */
 .toe {
   background-color: whitesmoke;
@@ -128,14 +131,12 @@ margin-left: -200px;
   background-color: white;
   color: black;
 }
-
 /* "Gallery" image */
 #tatGun {
   position:absolute;
 right:0;
 top:0;
 }
-
 /* Google Maps API from here on down */
 /* Giving the map some styling so it doesn't look 2-D */
 .google-maps {
@@ -149,7 +150,6 @@ top:0;
 }
 /* Set the size of the div element that contains the map */
 #map {
-
   height: 200px;
   width: auto;
 }
