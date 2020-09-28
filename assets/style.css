@@ -49,12 +49,10 @@ header {
 
 /*h2*/
 .spray {
-  margin-top: 45px;
+  margin-bottom: 20px;
   font-size: 27px;
   font-family: "Sedgwick Ave Display", cursive;
   color: whitesmoke;
-  text-align: center;
-  margin-left: -375px;
 }
 
 /* search form */
@@ -64,12 +62,12 @@ main {
 
 .searchCard {
   margin-top: 50px;
-  width: 600px;
+  margin-right: 115px;
+  margin-left: -200px;
+  width: 100%;
 }
 
 .searchbar {
-  margin-right: 115px;
-  margin-left: -200px;
   box-shadow: 0 0 8px 2px;
   color: chocolate;
   border-radius: 5px 5px 5px 5px;
@@ -77,8 +75,7 @@ main {
 
 /*search button*/
 #searchLink {
-  margin-left: 400px;
-  margin-top: 200px;
+  margin-top: 150px;
   width: 400px;
 }
 
