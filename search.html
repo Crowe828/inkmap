@@ -1,315 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inkmap | Search</title>
-
-    <!-- Bulma.io Framework -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
-    />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Font Awesome  -->
-    <script
-      src="https://kit.fontawesome.com/f4677e3cb7.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Custom Stylesheet  -->
-    <link rel="stylesheet" href="assets/style.css" />
-  </head>
-
-  <!-- Background image is bricks -->
-  <body class="brick">
-    <!-- Header -->
-    <header>
-      <!-- InkMap logo, smaller than on first page -->
-      <img class="whiteblot" src="assets/images/whitblot.png" alt="ink blot" />
-      <a href="https://fontmeme.com/fonts/tattoo-ink-font/">
-        <img
-          src="https://fontmeme.com/permalink/200927/703c0397a10b2ae4e16acb5cb6be3e9a.png"
-          alt="tattoo-ink-font"
-      /></a>
-      <a href="https://fontmeme.com/sans-serif-fonts/">
-        <img
-          src="https://fontmeme.com/permalink/200927/dda6becbcb5255a19e5d0dc21e4ddd25.png"
-          alt="sans-serif-fonts"
-      /></a>
-    </header>
-
-    <!-- Everything is within this -->
-    <div class="container main-container">
-      <!-- An explanation of how to use this site -->
-      <!-- <div class="card"> -->
-      <h2 class="spray">
-        Welcome, type in the idea of your tattoo and click submit. <br />We'll
-        provide you with creative images and the nearest tattoo artist near you!
-      </h2>
-      <!-- Searchbar -->
-      <div class="searchCard">
-        <form class="searchbar">
-          <div class="field has-addons">
-            <div class="control is-expanded">
-              <input
-                id="search-input"
-                class="input is-medium"
-                type="text"
-                placeholder="Search for Inspiration"
-              />
-            </div>
-            <div class="control">
-              <!-- Button when clicked displays images relating to the keyword entered -->
-              <button
-                type="submit"
-                id="search-btn"
-                class="button is-medium search-btn fas fa-syringe"
-              ></button>
-            </div>
+<html lang=“en”>
+<head>
+  <meta charset=“UTF-8" />
+  <meta name=“viewport” content=“width=device-width, initial-scale=1.0" />
+  <title>Inkmap | Search</title>
+  <!-- Bulma.io Framework -->
+  <link rel=“stylesheet” href=“https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css” />
+  <!-- Google Fonts -->
+  <link href=“https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap” rel=“stylesheet” />
+  <!-- Font Awesome  -->
+  <script src=“https://kit.fontawesome.com/f4677e3cb7.js” crossorigin=“anonymous”></script>
+  <!-- Custom Stylesheet  -->
+  <link rel=“stylesheet” href=“assets/style.css” />
+</head>
+<!-- Background image is bricks -->
+<body class=“brick”>
+  <!-- Header -->
+  <header>
+    <!-- InkMap logo, smaller than on first page -->
+    <img class=“whiteblot” src=“assets/images/whitblot.png” alt=“ink blot” />
+    <a href=“https://fontmeme.com/fonts/tattoo-ink-font/”>
+      <img src=“https://fontmeme.com/permalink/200927/703c0397a10b2ae4e16acb5cb6be3e9a.png” alt=“tattoo-ink-font” /></a>
+    <a href=“https://fontmeme.com/sans-serif-fonts/”>
+      <img src=“https://fontmeme.com/permalink/200927/dda6becbcb5255a19e5d0dc21e4ddd25.png”
+        alt=“sans-serif-fonts” /></a>
+  </header>
+  <!-- Everything is within this -->
+  <main class=“container main-container”>
+    <!-- An explanation of how to use this site -->
+    <h2 class=“spray”>
+      Welcome, type in the idea of your tattoo and click submit. <br />We’ll
+      provide you with creative images and the nearest tattoo artist near you!
+    </h2>
+    <!-- Searchbar -->
+    <div class=“searchCard”>
+      <form class=“searchbar”>
+        <div class=“field has-addons”>
+          <div class=“control is-expanded”>
+            <input id=“search-input” class=“input is-medium” type=“text” placeholder=“Search for Inspiration” />
           </div>
-        </form>
-      </div>
-      
-      <!-- Google Maps -->
-      <div class="google-maps">
-        <!-- Google Places info -->
-        <div id="panel"></div>
-        <!-- The actual map -->
-        <div id="map"></div>
-      </div>
-      <!-- "Gallery" image, generated images are displayed below here-->
-      <img
-        id="tatGun"
-        src="./assets/images/clipart2935492.png"
-        alt="Tattoo Gun"
-      />
+          <div class=“control”>
+            <!-- Button when clicked displays images relating to the keyword entered -->
+            <button type=“submit” id=“search-btn” class=“button is-medium search-btn fas fa-syringe”></button>
+          </div>
+        </div>
+      </form>
     </div>
-  </div>
-    <!-- Footer -->
-    <footer class="toe">
-      <h4 class="copyR">Inkmap | The Wombats &copy;</h4>
-    </footer>
-
-    <!-- Script to display Google Maps -->
-    <!-- This was writtien in the HTML file because the directions which Google has available demonstrates it this way -->
-    <script>
-      let pos;
-      let map;
-      let bounds;
-      let infoWindow;
-      let currentInfoWindow;
-      let service;
-      let infoPane;
-      function initMap() {
-        // Initializing variables
-        bounds = new google.maps.LatLngBounds();
-        infoWindow = new google.maps.InfoWindow();
-        currentInfoWindow = infoWindow;
-        infoPane = document.getElementById("panel");
-
-        // Geolocation
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(
-            (position) => {
-              pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-              };
-              map = new google.maps.Map(document.getElementById("map"), {
-                center: pos,
-                zoom: 10,
-              });
-
-              bounds.extend(pos);
-              infoWindow.setPosition(pos);
-              infoWindow.setContent("Location found.");
-              infoWindow.open(map);
-              map.setCenter(pos);
-
-              // Display places near the user
-              getNearbyPlaces(pos);
-            },
-            () => {
-              // Browser supports geolocation, but user denies permission
-              handleLocationError(true, infoWindow);
-            }
-          );
-        } else {
-          // Browser doesn't support geolocation
-          handleLocationError(false, infoWindow);
-        }
-      }
-
-      // If there is a geolocation error
-      function handleLocationError(browserHasGeolocation, infoWindow) {
-        // Set default location to Orlando, Florida
-        pos = { lat: 28.5492, lng: -81.3798 };
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: pos,
-          zoom: 10,
-        });
-
-        // If there is an error, let the user know
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(
-          browserHasGeolocation
-            ? "Geolocation permissions denied. Using default location."
-            : "Error: Your browser doesn't support geolocation."
-        );
-
-        infoWindow.open(map);
-        currentInfoWindow = infoWindow;
-
-        // Display places in Orlando, Florida
-        getNearbyPlaces(pos);
-      }
-
-      // Search for nearby palces
-      function getNearbyPlaces(position) {
-        let request = {
-          location: position,
-          rankBy: google.maps.places.RankBy.DISTANCE,
-          keyword: "tattoo",
-        };
-
-        service = new google.maps.places.PlacesService(map);
-        service.nearbySearch(request, nearbyCallback);
-      }
-
-      // Handle the results of the search
-      function nearbyCallback(results, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-          createMarkers(results);
-        }
-      }
-
-      // Set a marker at each location
-      function createMarkers(places) {
-        places.forEach((place) => {
-          let marker = new google.maps.Marker({
-            position: place.geometry.location,
-            map: map,
-            title: place.name,
-          });
-
-          // Add click listener to each marker
-          google.maps.event.addListener(marker, "click", () => {
-            let request = {
-              placeId: place.place_id,
-              fields: [
-                "name",
-                "formatted_address",
-                "geometry",
-                "rating",
-                "website",
-                "photos",
-              ],
+    <!-- Google Maps -->
+    <div class=“google-maps”>
+      <!-- Google Places info -->
+      <div id=“panel”></div>
+      <!-- The actual map -->
+      <div id=“map”></div>
+    </div>
+    <!-- “Gallery” image, generated images are displayed below here-->
+    <img id=“tatGun” src=“./assets/images/clipart2935492.png” alt=“Tattoo Gun” />
+  </main>
+  <!-- Footer -->
+  <footer class=“toe”>
+    <h4 class=“copyR”>Inkmap | The Wombats &copy;</h4>
+  </footer>
+  <!-- Script to display Google Maps -->
+  <!-- This was writtien in the HTML file because the directions which Google has available demonstrates it this way -->
+  <script>
+    let pos;
+    let map;
+    let bounds;
+    let infoWindow;
+    let currentInfoWindow;
+    let service;
+    let infoPane;
+    function initMap() {
+      // Initializing variables
+      bounds = new google.maps.LatLngBounds();
+      infoWindow = new google.maps.InfoWindow();
+      currentInfoWindow = infoWindow;
+      infoPane = document.getElementById(“panel”);
+      // Geolocation
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
             };
-            // Only fetch the details of a place when the user clicks on a marker
-            service.getDetails(request, (placeResult, status) => {
-              showDetails(placeResult, marker, status);
+            map = new google.maps.Map(document.getElementById(“map”), {
+              center: pos,
+              zoom: 10,
             });
-          });
-          // Adjust the map bounds to include the location of this marker
-          bounds.extend(place.geometry.location);
+            bounds.extend(pos);
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(“Location found.“);
+            infoWindow.open(map);
+            map.setCenter(pos);
+            // Display places near the user
+            getNearbyPlaces(pos);
+          },
+          () => {
+            // Browser supports geolocation, but user denies permission
+            handleLocationError(true, infoWindow);
+          }
+        );
+      } else {
+        // Browser doesn’t support geolocation
+        handleLocationError(false, infoWindow);
+      }
+    }
+    // If there is a geolocation error
+    function handleLocationError(browserHasGeolocation, infoWindow) {
+      // Set default location to Orlando, Florida
+      pos = { lat: 28.5492, lng: -81.3798 };
+      map = new google.maps.Map(document.getElementById(“map”), {
+        center: pos,
+        zoom: 10,
+      });
+      // If there is an error, let the user know
+      infoWindow.setPosition(pos);
+      infoWindow.setContent(
+        browserHasGeolocation
+          ? “Geolocation permissions denied. Using default location.”
+          : “Error: Your browser doesn’t support geolocation.”
+      );
+      infoWindow.open(map);
+      currentInfoWindow = infoWindow;
+      // Display places in Orlando, Florida
+      getNearbyPlaces(pos);
+    }
+    // Search for nearby palces
+    function getNearbyPlaces(position) {
+      let request = {
+        location: position,
+        rankBy: google.maps.places.RankBy.DISTANCE,
+        keyword: “tattoo”,
+      };
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, nearbyCallback);
+    }
+    // Handle the results of the search
+    function nearbyCallback(results, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        createMarkers(results);
+      }
+    }
+    // Set a marker at each location
+    function createMarkers(places) {
+      places.forEach((place) => {
+        let marker = new google.maps.Marker({
+          position: place.geometry.location,
+          map: map,
+          title: place.name,
         });
-        // Once all the markers have been placed, adjust the bounds of the map to show all the markers within the visible area.
-        map.fitBounds(bounds);
+        // Add click listener to each marker
+        google.maps.event.addListener(marker, “click”, () => {
+          let request = {
+            placeId: place.place_id,
+            fields: [
+              “name”,
+              “formatted_address”,
+              “geometry”,
+              “rating”,
+              “website”,
+              “photos”,
+            ],
+          };
+          // Only fetch the details of a place when the user clicks on a marker
+          service.getDetails(request, (placeResult, status) => {
+            showDetails(placeResult, marker, status);
+          });
+        });
+        // Adjust the map bounds to include the location of this marker
+        bounds.extend(place.geometry.location);
+      });
+      // Once all the markers have been placed, adjust the bounds of the map to show all the markers within the visible area.
+      map.fitBounds(bounds);
+    }
+    // Displays details above the marker
+    function showDetails(placeResult, marker, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        let placeInfowindow = new google.maps.InfoWindow();
+        placeInfowindow.setContent(
+          “<div><strong>” +
+          placeResult.name +
+          “</strong><br>” +
+          “Rating: ” +
+          placeResult.rating +
+          “</div>”
+        );
+        placeInfowindow.open(marker.map, marker);
+        currentInfoWindow.close();
+        currentInfoWindow = placeInfowindow;
+        showPanel(placeResult);
+      } else {
+        console.log(“showDetails failed: ” + status);
       }
-
-      // Displays details above the marker
-      function showDetails(placeResult, marker, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-          let placeInfowindow = new google.maps.InfoWindow();
-          placeInfowindow.setContent(
-            "<div><strong>" +
-              placeResult.name +
-              "</strong><br>" +
-              "Rating: " +
-              placeResult.rating +
-              "</div>"
-          );
-          placeInfowindow.open(marker.map, marker);
-          currentInfoWindow.close();
-          currentInfoWindow = placeInfowindow;
-          showPanel(placeResult);
-        } else {
-          console.log("showDetails failed: " + status);
-        }
+    }
+    function showPanel(placeResult) {
+      // If infoPane is already open, close it
+      if (infoPane.classList.contains(“open”)) {
+        infoPane.classList.remove(“open”);
       }
-
-      function showPanel(placeResult) {
-        // If infoPane is already open, close it
-        if (infoPane.classList.contains("open")) {
-          infoPane.classList.remove("open");
-        }
-
-        // Clear the previous details
-        while (infoPane.lastChild) {
-          infoPane.removeChild(infoPane.lastChild);
-        }
-
-        // Display a photo in the info panel if there is one
-        if (placeResult.photos != null) {
-          let firstPhoto = placeResult.photos[0];
-          let photo = document.createElement("img");
-          photo.classList.add("hero");
-          photo.src = firstPhoto.getUrl();
-          infoPane.appendChild(photo);
-        }
-
-        // Add place details with text formatting
-        let name = document.createElement("h1");
-        name.classList.add("place");
-        name.textContent = placeResult.name;
-        infoPane.appendChild(name);
-        if (placeResult.rating != null) {
-          let rating = document.createElement("p");
-          rating.classList.add("details");
-          rating.textContent = `Rating: ${placeResult.rating} \u272e`;
-          infoPane.appendChild(rating);
-        }
-
-        let address = document.createElement("p");
-        address.classList.add("details");
-        address.textContent = placeResult.formatted_address;
-        infoPane.appendChild(address);
-        if (placeResult.website) {
-          let websitePara = document.createElement("p");
-          let websiteLink = document.createElement("a");
-          let websiteUrl = document.createTextNode(placeResult.website);
-          websiteLink.appendChild(websiteUrl);
-          websiteLink.title = placeResult.website;
-          websiteLink.href = placeResult.website;
-          websitePara.appendChild(websiteLink);
-          infoPane.appendChild(websitePara);
-        }
-
-        // Open the infoPane
-        infoPane.classList.add("open");
+      // Clear the previous details
+      while (infoPane.lastChild) {
+        infoPane.removeChild(infoPane.lastChild);
       }
-
-   
-    </script>
-
-    <!-- Google Maps API -->
-    <!-- API Key: AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk -->
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk&libraries=places&callback=initMap"
-    ></script>
-
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Custom Script  -->
-    <script src="assets/script.js"></script>
-  </body>
+      // Display a photo in the info panel if there is one
+      if (placeResult.photos != null) {
+        let firstPhoto = placeResult.photos[0];
+        let photo = document.createElement(“img”);
+        photo.classList.add(“hero”);
+        photo.src = firstPhoto.getUrl();
+        infoPane.appendChild(photo);
+      }
+      // Add place details with text formatting
+      let name = document.createElement(“h1”);
+      name.classList.add(“place”);
+      name.textContent = placeResult.name;
+      infoPane.appendChild(name);
+      if (placeResult.rating != null) {
+        let rating = document.createElement(“p”);
+        rating.classList.add(“details”);
+        rating.textContent = `Rating: ${placeResult.rating} \u272e`;
+        infoPane.appendChild(rating);
+      }
+      let address = document.createElement(“p”);
+      address.classList.add(“details”);
+      address.textContent = placeResult.formatted_address;
+      infoPane.appendChild(address);
+      if (placeResult.website) {
+        let websitePara = document.createElement(“p”);
+        let websiteLink = document.createElement(“a”);
+        let websiteUrl = document.createTextNode(placeResult.website);
+        websiteLink.appendChild(websiteUrl);
+        websiteLink.title = placeResult.website;
+        websiteLink.href = placeResult.website;
+        websitePara.appendChild(websiteLink);
+        infoPane.appendChild(websitePara);
+      }
+      // Open the infoPane
+      infoPane.classList.add(“open”);
+    }
+  </script>
+  <!-- Google Maps API -->
+  <!-- API Key: AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk -->
+  <script async defer
+    src=“https://maps.googleapis.com/maps/api/js?key=AIzaSyDHESksBbXT3HwivsjO9_9M5NkhWCBhaPk&libraries=places&callback=initMap”></script>
+  <!-- jQuery -->
+  <script src=“https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js”></script>
+  <!-- Custom Script  -->
+  <script src=“assets/script.js”></script>
+</body>
 </html>
