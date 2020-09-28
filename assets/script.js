@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     ></script>
 
+
     <!-- Custom Style Sheet  -->
     <link rel="stylesheet" href="assets/style.css" />
     <title>Inkmap</title>
@@ -53,3 +54,16 @@
     <script src="assets/script.js"></script>
   </body>
 </html>
+
+      // Display every image generated from the search
+      for (let i = 0; i < imageResults.length; i++) {
+        // Create image tag
+        var image = document.createElement("img");
+        // Set src of image to data url
+        image.setAttribute("src", imageResults[i].urls.full);
+        mainContainer.append(image);
+      }
+    });
+  }
+});
+
