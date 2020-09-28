@@ -2,13 +2,16 @@
 /*1st page background*/
 .hero-image {
   padding: 270px;
-  height: 800px;
+  height: 100%;
   width: 100%;
   margin-bottom: 25px;
   background-image: url("./images/herotattoo.jpeg");
   background-size: cover;
   background-position: center;
   text-align: center;
+  position: fixed;
+  
+  
 }
 
 /*2nd page background */
@@ -69,6 +72,13 @@ header {
 #search-input {
   background-color: white;
   color: black;
+}
+#searchLink {
+  margin-top: 200px;
+  
+  bottom: 0px;
+  width:100%;
+  align-content: center;
 }
 
 .button {
