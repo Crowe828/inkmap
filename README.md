@@ -1,10 +1,10 @@
-# Inkmap
+Inkmap
+Welcome, we are proud to introduce our first group project.
 
-Welcome, we are proud to introduce our first group project. 
 
-## Description
+Description
 
-Inkmap is a web application that brings artists and art into one domain. When the users first upload the site, we provide them an image of what thier desired end goal would entail. Based on the user's desired choice of art we would match them with an artist within the area. With the provided search engine the user is able to not only search the type of art they want but nearby locations to visit. We use an API database from unsplash.com where we provide 10 image results to what the user has searched for. The search results will portray images as well as a map with various locations of nearby tattoo shops, by utilizing the Google Maps API. This will provide the user with information regarding the shop's phone number and address, creating a direct link between an artist and a user.
+Inkmap is a web application that brings artists and art into one domain. When the users first upload the site, we provide them an image of what their desired end goal would entail. Based on the user's desired choice of art we would match them with an artist within the area. With the provided search engine the user is able to not only search the type of art they want but nearby locations to visit. We use an API database from unsplash.com where we provide 10 image results to what the user has searched for. The search results will portray images as well as a map with various locations of nearby tattoo shops, by utilizing the Google Maps API. This will provide the user with information regarding the shop's phone number and address, creating a direct link between an artist and a user.
 
 ## License
 
@@ -42,7 +42,7 @@ JavaScript
 jQuery
 Bulma - https://bulma.io/expo/
 Font Awesome - https://fontmeme.com/fonts/tattoo-ink-font/
-Google API - https://cloud.google.com/maps-platform/
+Google Maps API - https://cloud.google.com/maps-platform/
 UnSplash API - https://unsplash.com/developers
 
 ## Creditors
@@ -51,3 +51,4 @@ Christian Rowe - Contributor - https://github.com/Crowe828
 Brigitte Gill - Contributor - https://github.com/brigil
 Sarah Iraurgui - Contributor - https://github.com/irasar
 Javier Ibanez - Contributor - https://github.com/jibanez92
+
