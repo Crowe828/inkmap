@@ -1,100 +1,96 @@
 /*1st page background*/
 .hero-image {
-  padding: 270px;
-  height: 800px;
+  height: 100%;
   width: 100%;
-  margin-bottom: 25px;
   background-image: url("./images/herotattoo.jpeg");
   background-size: cover;
-  background-position: center;
   text-align: center;
 }
 
 /*2nd page background */
 .brick {
   padding: 270px;
-  height: 900px;
+  height: 100%;
   width: 100%;
   background-size: cover;
   background-position: center;
-  text-align: center;
- background-image: url("./images/tat-girl.jpg");  
-position: fixed;
+  background-image: url("./images/tat-girl.jpeg");
 }
 
-/* .card{
-  
-  background-image: url("https://waglerbadenhop.com/wp-content/uploads/2018/07/White-Brick-Wall-Background.jpg");
-  background-size: 800px;
-  margin: 100px;
-} */
 /* heading style */
-.blot {
-  height: 130px;
-  margin: 0px;
-}
 .whiteblot {
   height: 230px;
   width: 230px;
-  margin: -40px;
+  margin: -60px;
 }
 
+.blot2 {
+  height: 130px;
+  width: 130px;
+  margin: -30px;
+}
+.logo {
+  padding-top: 15px;
+  padding-left: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 header {
   align-content: center;
   padding-left: 300px;
 }
+/*whole wrapper*/
 .main-container {
-  text-align: center;
-  margin-bottom: 65px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 100px;
-}
-/*h2*/
-.spray {
-  margin-top: 120px;
-  font-size: 36px;
-  font-family: "Sedgwick Ave Display", cursive;
-  color: black;
   text-align: center;
 }
 
-/* search bar */
+/*h2*/
+.spray {
+  margin-top: 45px;
+  font-size: 27px;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: whitesmoke;
+  text-align: center;
+  margin-left: -375px;
+}
+
+/* search form */
+main {
+  margin-top: 300px;
+}
+
 .searchCard {
-  margin-top: 60px;
-  margin-left: 250px;
-  margin-right: 250px;
-  padding-bottom: 50px;
+  margin-top: 50px;
   width: 600px;
 }
-.label {
-  text-align: center;
-  font-size: larger;
-  margin-bottom: 50px;
-  margin-top: 15px;
-}
+
 .searchbar {
-  margin-top: 10px;
+  margin-right: 115px;
+  margin-left: -200px;
   box-shadow: 0 0 8px 2px;
-  color: red;
+  color: chocolate;
   border-radius: 5px 5px 5px 5px;
 }
 
+/*search button*/
+#searchLink {
+  margin-top: 200px;
+  width: 100%;
+}
 .button {
-  background-color: red;
+  background-color: chocolate;
 }
-
 .button:hover {
-  background-color: #990707;
+  background-color: darkred;
 }
-
 /* Footer */
 .toe {
   background-color: whitesmoke;
   text-align: center;
   width: 100%;
-  padding: 15px;
-  color: black;
+  padding: 8px;
+  color: peachpuff;
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -102,21 +98,13 @@ header {
   box-shadow: 0 0 10px 2px;
 }
 .copyR {
-  font-weight: bold;
   color: black;
 }
 
 #search-input {
   background-color: white;
-  border: white;
   color: black;
 }
-
-/* "Gallery" image */
-#tatGun {
-  margin-top: 50px;
-}
-
 /* Google Maps API from here on down */
 /* Giving the map some styling so it doesn't look 2-D */
 .google-maps {
@@ -124,17 +112,20 @@ header {
   box-shadow: 0 0 8px 2px;
   border-style: solid;
   border-width: 1px;
+  width: 100%;
+  height: 300px;
+  margin-top: 100px;
+  margin-left: -200px;
+  margin-bottom: 75px;
 }
-
 /* Set the size of the div element that contains the map */
 #map {
-  height: 400px;
+  height: 300px;
   width: auto;
 }
-
 /* Panel that displays all of the info about local tattoo shops */
 #panel {
-  height: 400px;
+  height: 300px;
   width: null;
   color: red;
   background-color: lightgrey;
@@ -143,15 +134,11 @@ header {
   overflow-x: hidden;
   transition: all 0.2s ease-out;
   font-size: smaller;
-  margin-bottom: 200px;
-  
 }
-
 /* Only when the panel is open */
 .open {
   width: 250px;
 }
-
 /* Styling for place details */
 .hero {
   width: 100%;
@@ -159,18 +146,15 @@ header {
   max-height: 166px;
   display: block;
 }
-
 .place,
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   word-wrap: break-word;
   padding: 15px;
 }
-
 .details {
   color: darkslategrey;
 }
-
 a {
   text-decoration: none;
   color: darkslategrey;

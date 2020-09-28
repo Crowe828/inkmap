@@ -7,6 +7,7 @@ $(document).ready(function () {
     // What the user searches for plus the word tattoo, so the search is always related to tattoos
     var searchPlusTattoos = searchInput + " tattoo";
     unsplash(searchPlusTattoos);
+
   });
 
   function unsplash(search) {
@@ -31,7 +32,6 @@ $(document).ready(function () {
         var image = document.createElement("img");
         // Set src of image to data url
         image.setAttribute("src", imageResults[i].urls.full);
-        image.setAttribute("class", "image-gallery");
         mainContainer.append(image);
       }
     });
