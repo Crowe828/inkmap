@@ -7,6 +7,7 @@ $(document).ready(function () {
     // What the user searches for plus the word tattoo, so the search is always related to tattoos
     var searchPlusTattoos = searchInput + " tattoo";
     unsplash(searchPlusTattoos);
+
   });
 
   function unsplash(search) {
