@@ -32,7 +32,6 @@ $(document).ready(function () {
         var image = document.createElement("img");
         // Set src of image to data url
         image.setAttribute("src", imageResults[i].urls.full);
-        image.setAttribute("class", "image-gallery");
         mainContainer.append(image);
       }
     });
