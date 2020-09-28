@@ -12,10 +12,22 @@
 
 /*2nd page background */
 .brick {
-  background-size: 100%;
-  background-image: url("https://waglerbadenhop.com/wp-content/uploads/2018/07/White-Brick-Wall-Background.jpg");
+  padding: 270px;
+  height: 900px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+ background-image: url("./images/tat-girl.jpg");  
+position: fixed;
 }
 
+/* .card{
+  
+  background-image: url("https://waglerbadenhop.com/wp-content/uploads/2018/07/White-Brick-Wall-Background.jpg");
+  background-size: 800px;
+  margin: 100px;
+} */
 /* heading style */
 .blot {
   height: 130px;
@@ -81,13 +93,12 @@ header {
   background-color: whitesmoke;
   text-align: center;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   color: black;
   position: fixed;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  border-radius: 5px;
   box-shadow: 0 0 10px 2px;
 }
 .copyR {
@@ -97,6 +108,7 @@ header {
 
 #search-input {
   background-color: white;
+  border: white;
   color: black;
 }
 
@@ -108,7 +120,7 @@ header {
 /* Google Maps API from here on down */
 /* Giving the map some styling so it doesn't look 2-D */
 .google-maps {
-  border: rgb(110, 110, 110);
+  border: white;
   box-shadow: 0 0 8px 2px;
   border-style: solid;
   border-width: 1px;
@@ -124,7 +136,7 @@ header {
 #panel {
   height: 400px;
   width: null;
-  color: darkslategrey;
+  color: red;
   background-color: lightgrey;
   float: left;
   z-index: 1;
@@ -132,6 +144,7 @@ header {
   transition: all 0.2s ease-out;
   font-size: smaller;
   margin-bottom: 200px;
+  
 }
 
 /* Only when the panel is open */
@@ -149,7 +162,7 @@ header {
 
 .place,
 p {
-  font-family: "Special Elite", cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   word-wrap: break-word;
   padding: 15px;
 }
