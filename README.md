@@ -2,10 +2,20 @@
 
 Welcome to InkMap, an application designed to not only inspire you to get your next tattoo, but also to show you where you can get it done. Find your inspiration with InkMap.
 
-
 ## Description
 
 InkMap is a web application that brings artists and art into one domain. When the user first opens the application, it will provide them an image of what their desired end goal would entail. Based on the user's desired choice of art we would match them with an artist within the area. With the provided search engine the user is able to not only search the type of art they want but nearby locations to visit. We use an API database from unsplash.com where we provide 10 image results to what the user has searched for. The search results will portray images as well as a map with various locations of nearby tattoo shops, by utilizing the Google Maps API. This will provide the user with information regarding the shop's phone number and address, creating a direct link between an artist and a user.
+
+## Images
+
+- This is the initial Splashpage the user sees.
+  ![Splash Page](https://github.com/Crowe828/inkmap/blob/master/assets/images/inkmap-splash.png)
+
+- The second page opens with a searchbar as well as Google Maps which grabs your location and shows you the nearest tattoo shops around you.
+  ![Google Maps](https://github.com/Crowe828/inkmap/blob/master/assets/images/inkmap-maps.png)
+
+- Once a user searches for an idea for a tattoo, below the map will display a variety of images (provided by Unsplash) to inspire the users idea.
+  ![Unsplash Images](https://github.com/Crowe828/inkmap/blob/master/assets/images/inkmap-unsplash.png)
 
 ## License
 
