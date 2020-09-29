@@ -1,5 +1,3 @@
-<!-- USE EVERYTHING BETWEEN THESE -->
-
 ## InkMap
 
 Welcome to InkMap, an application designed to not only inspire you to get your next tattoo, but also to show you where you can get it done. Find your inspiration with InkMap.
@@ -53,4 +51,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - Brigitte Gill - Contributor - https://github.com/brigil
 - Sarah Iraurgui - Contributor - https://github.com/irasar
 - Javier Ibanez - Contributor - https://github.com/jibanez92
-<!-- USE EVERYTHING BETWEEN THESE -->
