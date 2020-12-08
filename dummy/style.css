@@ -1,15 +1,3 @@
-/* USE EVERYTHING BETWEEN THESE */
-/*1st page background*/
-.hero-image {
-  height: 100%;
-  width: 100%;
-  background-image: url("./images/herotattoo.jpeg");
-  background-size: cover;
-  text-align: center;
-  position: fixed;
-}
-
-/*2nd page background */
 .brick {
   padding: 270px;
   height: 100%;
@@ -17,14 +5,6 @@
   background-size: cover;
   background-position: center;
   background-image: url("./images/tat-girl.jpeg");
-}
-
-/* heading style */
-.whiteblot {
-  height: 230px;
-  width: 230px;
-  margin: -60px;
-  margin-top: 100px;
 }
 
 .blot2 {
@@ -74,18 +54,6 @@ main {
   border-radius: 5px 5px 5px 5px;
 }
 
-/*search button*/
-#searchLink {
-  margin-top: 150px;
-  width: 400px;
-}
-
-.button {
-  background-color: chocolate;
-}
-.button:hover {
-  background-color: darkred;
-}
 /* Footer */
 .toe {
   background-color: whitesmoke;
