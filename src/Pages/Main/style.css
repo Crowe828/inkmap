@@ -7,6 +7,19 @@ main {
   margin-top: 300px;
 }
 
+footer {
+  background-color: whitesmoke;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  color: peachpuff;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  box-shadow: 0 0 10px 2px;
+}
+
 .brick {
   padding: 270px;
   height: 100%;
@@ -24,7 +37,7 @@ main {
   top: 0;
 }
 
-.blot2 {
+.blot {
   height: 130px;
   width: 130px;
   margin: -30px;
@@ -48,19 +61,6 @@ main {
   color: whitesmoke;
 }
 
-.toe {
-  background-color: whitesmoke;
-  text-align: center;
-  width: 100%;
-  padding: 8px;
-  color: peachpuff;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  box-shadow: 0 0 10px 2px;
-}
-
-.copyR {
+.copy {
   color: black;
 }

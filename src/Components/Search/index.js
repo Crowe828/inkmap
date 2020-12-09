@@ -6,17 +6,18 @@ export default function Search(props) {
       <div className="field has-addons">
         <div className="control is-expanded">
           <input
-            id="search-input"
+            name="search"
+            onChange={props.handleInputChange}
+            placeholder="Search for inspiration"
             className="input is-medium"
-            type="text"
-            placeholder="Search for Inspiration"
+            id="search-input"
           />
         </div>
         <div className="control">
           <button
             type="submit"
-            id="search-btn"
             className="button is-medium search-btn fas fa-syringe"
+            onClick={(e) => props.handleFormSubmit(e)}
           ></button>
         </div>
       </div>

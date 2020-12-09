@@ -1,12 +1,13 @@
-import Whiteblot from "./Images/whiteblot.png";
 import Search from "../../Components/Search";
+import UnsplashImages from "../../Components/UnsplashImages";
+import Whiteblot from "./Images/whiteblot.png";
 import "./style.css";
 
-export default function Main() {
+export const Main = ({ handleFormSubmit, handleInputChange, results }) => {
   return (
     <div className="brick">
       <header className="logo">
-        <img className="blot2" src={Whiteblot} alt="ink blot" />
+        <img className="blot" src={Whiteblot} alt="ink blot" />
         <a href="https://fontmeme.com/fonts/tattoo-ink-font/">
           <img
             src="https://fontmeme.com/permalink/200928/31d78e111c03d6f7ca31b4ea87a9a578.png"
@@ -28,19 +29,25 @@ export default function Main() {
             We'll provide you with creative images and the nearest tattoo artist
             near you!
           </h2>
-          <Search />
+          {/* Searchbar */}
+          <Search
+            handleInputChange={handleInputChange}
+            handleFormSubmit={handleFormSubmit}
+          />
+          {/* Unsplash Images */}
+          <UnsplashImages results={results} />
         </div>
-
         <div className="google-maps">
           <div id="panel"></div>
 
           <div id="map"></div>
         </div>
       </main>
-
-      <footer className="toe">
-        <h4 className="copyR">Inkmap | The Wombats &copy;</h4>
+      <footer>
+        <h4 className="copy">Ink Map | The Wombats &copy;</h4>
       </footer>
     </div>
   );
-}
+};
+
+export default Main;
