@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
+import Whiteblot from "./Images/whiteblot.png";
 import "bulma/css/bulma.css";
 import "./style.css";
-import Whiteblot from "./Images/whiteblot.png";
 
 export default function Splash() {
   return (

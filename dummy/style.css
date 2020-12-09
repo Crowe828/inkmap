@@ -1,81 +1,4 @@
-.brick {
-  padding: 270px;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-image: url("./images/tat-girl.jpeg");
-}
 
-.blot2 {
-  height: 130px;
-  width: 130px;
-  margin: -30px;
-}
-.logo {
-  padding-top: 15px;
-  padding-left: 30px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-header {
-  align-content: center;
-  padding-left: 300px;
-}
-/*whole wrapper*/
-.main-container {
-  text-align: center;
-}
-
-/*h2*/
-.spray {
-  margin-bottom: 20px;
-  font-size: 27px;
-  font-family: "Sedgwick Ave Display", cursive;
-  color: whitesmoke;
-}
-
-/* search form */
-main {
-  margin-top: 300px;
-}
-
-.searchCard {
-  margin-top: 50px;
-  margin-right: 115px;
-  margin-left: -200px;
-  width: 100%;
-}
-
-.searchbar {
-  box-shadow: 0 0 8px 2px;
-  color: chocolate;
-  border-radius: 5px 5px 5px 5px;
-}
-
-/* Footer */
-.toe {
-  background-color: whitesmoke;
-  text-align: center;
-  width: 100%;
-  padding: 8px;
-  color: peachpuff;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  box-shadow: 0 0 10px 2px;
-}
-.copyR {
-  color: black;
-}
-
-#search-input {
-  background-color: white;
-  color: black;
-}
-/* Google Maps API from here on down */
 /* Giving the map some styling so it doesn't look 2-D */
 .google-maps {
   border: white;
@@ -129,4 +52,4 @@ a {
   text-decoration: none;
   color: darkslategrey;
 }
-/* USE EVERYTHING BETWEEN THESE */
+
