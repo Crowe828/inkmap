@@ -1,9 +1,8 @@
-import API from "../../Utils/API";
 import Whiteblot from "./Images/whiteblot.png";
+import Search from "../../Components/Search";
 import "./style.css";
 
 export default function Main() {
-  
   return (
     <div className="brick">
       <header className="logo">
@@ -29,25 +28,7 @@ export default function Main() {
             We'll provide you with creative images and the nearest tattoo artist
             near you!
           </h2>
-          <form className="searchbar">
-            <div className="field has-addons">
-              <div className="control is-expanded">
-                <input
-                  id="search-input"
-                  className="input is-medium"
-                  type="text"
-                  placeholder="Search for Inspiration"
-                />
-              </div>
-              <div className="control">
-                <button
-                  type="submit"
-                  id="search-btn"
-                  className="button is-medium search-btn fas fa-syringe"
-                ></button>
-              </div>
-            </div>
-          </form>
+          <Search />
         </div>
 
         <div className="google-maps">

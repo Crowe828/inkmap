@@ -1,0 +1,10 @@
+.searchbar {
+  box-shadow: 0 0 8px 2px;
+  color: chocolate;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#search-input {
+  background-color: white;
+  color: black;
+}

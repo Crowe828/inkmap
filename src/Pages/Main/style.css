@@ -48,12 +48,6 @@ main {
   color: whitesmoke;
 }
 
-.searchbar {
-  box-shadow: 0 0 8px 2px;
-  color: chocolate;
-  border-radius: 5px 5px 5px 5px;
-}
-
 .toe {
   background-color: whitesmoke;
   text-align: center;
@@ -68,10 +62,5 @@ main {
 }
 
 .copyR {
-  color: black;
-}
-
-#search-input {
-  background-color: white;
   color: black;
 }
