@@ -1,7 +1,9 @@
+import API from "../../Utils/API";
 import Whiteblot from "./Images/whiteblot.png";
 import "./style.css";
 
 export default function Main() {
+  
   return (
     <div className="brick">
       <header className="logo">

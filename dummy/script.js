@@ -1,4 +1,3 @@
-// <!-- USE EVERYTHING BETWEEN THESE -->
 // JavaScript for Unsplash
 $(document).ready(function () {
   $("#search-btn").on("click", function (event) {
@@ -37,4 +36,3 @@ $(document).ready(function () {
     });
   }
 });
-// <!-- USE EVERYTHING BETWEEN THESE -->

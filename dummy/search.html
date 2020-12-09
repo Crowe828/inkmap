@@ -3,14 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inkmap | Search</title>
-
-    <!-- Bulma.io Framework -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
-    />
-
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap"
@@ -25,66 +17,7 @@
   </head>
 
   <body class="brick">
-    <header class="logo">
-      <!-- InkMap logo, smaller than on first page -->
-      <img class="blot2" src="assets/images/whitblot.png" alt="ink blot" />
-      <a href="https://fontmeme.com/fonts/tattoo-ink-font/"
-        ><img
-          src="https://fontmeme.com/permalink/200928/31d78e111c03d6f7ca31b4ea87a9a578.png"
-          alt="tattoo-ink-font"
-      /></a>
-      <a href="https://fontmeme.com/fonts/slim-sans-serif-font/"
-        ><img
-          src="https://fontmeme.com/permalink/200928/d544046b030a1407b8b0f937bec183ed.png"
-          alt="slim-sans-serif-font"
-      /></a>
-    </header>
 
-    <main class="container main-container">
-      <!-- Searchbar -->
-      <div class="searchCard">
-        <h2 class="spray">
-          Welcome, type in the idea of your tattoo and click submit. <br />We'll
-          provide you with creative images and the nearest tattoo artist near
-          you!
-        </h2>
-        <form class="searchbar">
-          <div class="field has-addons">
-            <div class="control is-expanded">
-              <input
-                id="search-input"
-                class="input is-medium"
-                type="text"
-                placeholder="Search for Inspiration"
-              />
-            </div>
-            <div class="control">
-              <!-- Button when clicked displays images relating to the keyword entered -->
-              <button
-                type="submit"
-                id="search-btn"
-                class="button is-medium search-btn fas fa-syringe"
-              ></button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <!-- Google Maps -->
-      <div class="google-maps">
-        <!-- Google Places info -->
-        <div id="panel"></div>
-        <!-- The actual map -->
-        <div id="map"></div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="toe">
-      <h4 class="copyR">Inkmap | The Wombats &copy;</h4>
-    </footer>
-
-    <!-- Script to display Google Maps -->
-    <!-- This was writtien in the HTML file because the directions which Google has available demonstrates it this way -->
     <script>
       let pos;
       let map;
@@ -298,4 +231,3 @@
     <script src="assets/script.js"></script>
   </body>
 </html>
-<!-- USE EVERYTHING BETWEEN THESE -->
