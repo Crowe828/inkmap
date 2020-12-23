@@ -5,9 +5,9 @@ import "./style.css";
 
 export const Main = ({ handleFormSubmit, handleInputChange, results }) => {
   return (
-    <div className="brick">
+    <div className="searchpage">
       <header className="logo">
-        <img className="blot" src={Whiteblot} alt="ink blot" />
+        <img className="inkblot" src={Whiteblot} alt="inkblot" />
         <a href="https://fontmeme.com/fonts/tattoo-ink-font/">
           <img
             src="https://fontmeme.com/permalink/200928/31d78e111c03d6f7ca31b4ea87a9a578.png"
@@ -22,9 +22,9 @@ export const Main = ({ handleFormSubmit, handleInputChange, results }) => {
         </a>
       </header>
 
-      <main className="container main-container">
-        <div className="searchCard">
-          <h2 className="spray">
+      <main>
+        <div className="searchUnsplash">
+          <h2 className="description">
             Welcome, type in the idea of your tattoo and click submit. <br />
             We'll provide you with creative images and the nearest tattoo artist
             near you!
@@ -32,6 +32,7 @@ export const Main = ({ handleFormSubmit, handleInputChange, results }) => {
           
           {/* Searchbar */}
           <Search
+          className="searchbar"
             handleInputChange={handleInputChange}
             handleFormSubmit={handleFormSubmit}
           />

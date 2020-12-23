@@ -8,7 +8,8 @@ export default {
   defaultData: function () {
     return Axios.get(
       "https://api.unsplash.com/search/photos/?query=tattoo&client_id=" +
-        unsplashKey
+        unsplashKey +
+        "&per_page=12"
     );
   },
 
@@ -18,7 +19,8 @@ export default {
       "https://api.unsplash.com/search/photos/?query=" +
         query +
         "&client_id=" +
-        unsplashKey
+        unsplashKey +
+        "&per_page=12"
     );
   },
 };

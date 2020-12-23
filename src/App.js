@@ -28,14 +28,15 @@ export const App = () => {
   function getPics(query) {
     API.getData(query)
       .then((res) => setResults(res.data.results))
-      .then(console.log(results))
       .catch((err) => console.log(err));
   }
 
+  // Set search state to what the user enters
   function handleInputChange(event) {
     setSearch(event.target.value);
   }
 
+  // Submit the users search
   function handleFormSubmit(event) {
     event.preventDefault();
     getPics(search);

@@ -1,11 +1,15 @@
 import "./style.css";
 
 export default function UnsplashImages(props) {
-return (
+  return (
     <div>
+      <div className="columns is-multiline">
         {props.results.map((result) => (
-            <img src={result.urls.regular} alt={result.alt_description} key={result.id} />
+          <div className="column is-one-quarter" key={result.id}>
+            <img src={result.urls.small} alt={result.alt_description} />
+          </div>
         ))}
+      </div>
     </div>
-)
+  );
 }

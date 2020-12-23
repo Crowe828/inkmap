@@ -8,7 +8,7 @@ export default function Search(props) {
           <input
             name="search"
             onChange={props.handleInputChange}
-            placeholder="Search for inspiration"
+            placeholder="Search for inspiration."
             className="input is-medium"
             id="search-input"
           />
