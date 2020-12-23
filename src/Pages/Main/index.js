@@ -29,6 +29,7 @@ export const Main = ({ handleFormSubmit, handleInputChange, results }) => {
             We'll provide you with creative images and the nearest tattoo artist
             near you!
           </h2>
+          
           {/* Searchbar */}
           <Search
             handleInputChange={handleInputChange}

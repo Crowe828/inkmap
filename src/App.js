@@ -10,17 +10,35 @@ export const App = () => {
   const [results, setResults] = useState([]);
   const [search, setSearch] = useState("");
 
-  // on mount, state will show popular animes
+  // On mount state will display tattoo images
   useEffect(() => {
-    getPics();
+    getDefault();
   }, []);
 
-  function getPics() {
-    API.getData()
+  // Function that sets state to tattoo images
+  function getDefault() {
+    API.defaultData()
       .then((res) => {
-        console.log(res.data.results);
+        setResults(res.data.results);
       })
       .catch((err) => console.log(err));
+  }
+
+  // Search for an image
+  function getPics(query) {
+    API.getData(query)
+      .then((res) => setResults(res.data.results))
+      .then(console.log(results))
+      .catch((err) => console.log(err));
+  }
+
+  function handleInputChange(event) {
+    setSearch(event.target.value);
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    getPics(search);
   }
 
   return (
@@ -31,7 +49,12 @@ export const App = () => {
             <Splash />
           </Route>
           <Route path="/main">
-            <Main />
+            <Main
+              handleFormSubmit={handleFormSubmit}
+              handleInputChange={handleInputChange}
+              results={results}
+              search={search}
+            />
           </Route>
         </Switch>
       </Router>
