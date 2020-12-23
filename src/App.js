@@ -13,6 +13,7 @@ export const App = () => {
   // On mount state will display tattoo images
   useEffect(() => {
     getDefault();
+    fsPlaces();
   }, []);
 
   // Function that sets state to tattoo images
@@ -24,6 +25,14 @@ export const App = () => {
       .catch((err) => console.log(err));
   }
 
+  function fsPlaces() {
+    API.foursquare()
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  }
+  
   // Search for an image
   function getPics(query) {
     API.getData(query)
