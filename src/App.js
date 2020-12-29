@@ -32,7 +32,7 @@ export const App = () => {
       })
       .catch((err) => console.log(err));
   }
-  
+
   // Search for an image
   function getPics(query) {
     API.getData(query)
