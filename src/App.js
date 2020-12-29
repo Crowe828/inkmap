@@ -28,7 +28,7 @@ export const App = () => {
   function fsPlaces() {
     API.foursquare()
       .then((res) => {
-        console.log(res);
+        console.log(res.data.response.groups[0].items);
       })
       .catch((err) => console.log(err));
   }

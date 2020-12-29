@@ -29,20 +29,15 @@ export const Main = ({ handleFormSubmit, handleInputChange, results }) => {
             We'll provide you with creative images and the nearest tattoo artist
             near you!
           </h2>
-          
+
           {/* Searchbar */}
           <Search
-          className="searchbar"
+            className="searchbar"
             handleInputChange={handleInputChange}
             handleFormSubmit={handleFormSubmit}
           />
           {/* Unsplash Images */}
           <UnsplashImages results={results} />
-        </div>
-        <div className="google-maps">
-          <div id="panel"></div>
-
-          <div id="map"></div>
         </div>
       </main>
       <footer>
