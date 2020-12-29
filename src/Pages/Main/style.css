@@ -1,0 +1,59 @@
+.searchpage {
+  background-image: url("./Images/tat-girl.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+}
+
+.logo {
+  align-content: center;
+  padding-top: 15px;
+  padding-left: 30px;
+}
+
+.inkblot {
+  height: 130px;
+  width: 130px;
+  margin: -30px;
+}
+
+main {
+  margin-top: 300px;
+  text-align: center;
+}
+
+.searchUnsplash {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+.description {
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: whitesmoke;
+}
+
+.searchbar {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+footer {
+  background-color: whitesmoke;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  color: peachpuff;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.copy {
+  color: black;
+}
