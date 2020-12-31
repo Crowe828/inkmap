@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/inkmap/static/css/main.7efa9a52.chunk.css",
+    "main.js": "/inkmap/static/js/main.0e7c5b89.chunk.js",
+    "main.js.map": "/inkmap/static/js/main.0e7c5b89.chunk.js.map",
+    "runtime-main.js": "/inkmap/static/js/runtime-main.5ea4fb86.js",
+    "runtime-main.js.map": "/inkmap/static/js/runtime-main.5ea4fb86.js.map",
+    "static/css/2.632c9fdd.chunk.css": "/inkmap/static/css/2.632c9fdd.chunk.css",
+    "static/js/2.f0acd8e5.chunk.js": "/inkmap/static/js/2.f0acd8e5.chunk.js",
+    "static/js/2.f0acd8e5.chunk.js.map": "/inkmap/static/js/2.f0acd8e5.chunk.js.map",
+    "index.html": "/inkmap/index.html",
+    "static/css/2.632c9fdd.chunk.css.map": "/inkmap/static/css/2.632c9fdd.chunk.css.map",
+    "static/css/main.7efa9a52.chunk.css.map": "/inkmap/static/css/main.7efa9a52.chunk.css.map",
+    "static/js/2.f0acd8e5.chunk.js.LICENSE.txt": "/inkmap/static/js/2.f0acd8e5.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/inkmap/static/media/tat-girl.d1c90793.jpeg",
+    "static/media/whiteblot.01e2cb19.png": "/inkmap/static/media/whiteblot.01e2cb19.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ea4fb86.js",
+    "static/css/2.632c9fdd.chunk.css",
+    "static/js/2.f0acd8e5.chunk.js",
+    "static/css/main.7efa9a52.chunk.css",
+    "static/js/main.0e7c5b89.chunk.js"
+  ]
+}
