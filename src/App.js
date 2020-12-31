@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import API from "./Utils/API";
 import Splash from "./Pages/Splash";
 import Main from "./Pages/Main";
@@ -53,21 +53,19 @@ export const App = () => {
 
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Splash />
-          </Route>
-          <Route path="/main">
-            <Main
-              handleFormSubmit={handleFormSubmit}
-              handleInputChange={handleInputChange}
-              results={results}
-              search={search}
-            />
-          </Route>
-        </Switch>
-      </Router>
+      <Switch>
+        <Route exact path="/">
+          <Splash />
+        </Route>
+        <Route path="/main">
+          <Main
+            handleFormSubmit={handleFormSubmit}
+            handleInputChange={handleInputChange}
+            results={results}
+            search={search}
+          />
+        </Route>
+      </Switch>
     </div>
   );
 };
