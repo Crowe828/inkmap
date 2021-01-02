@@ -1,10 +1,10 @@
 .hero-image {
-  height: 100%;
-  width: 100%;
-  background-image: url("./Images/herotattoo.jpeg");
+  height: 750px;
+  background-image: url("./Images/herotattoo.jpg");
+  background-position: center top;
   background-size: cover;
   text-align: center;
-  position: fixed;
+  background-attachment: fixed;
 }
 
 .whiteblot {
@@ -23,6 +23,6 @@
 }
 
 #searchLink {
-  margin-top: 150px;
+  margin-top: 100px;
   width: 400px;
 }
