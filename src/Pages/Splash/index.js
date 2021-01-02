@@ -6,7 +6,6 @@ import "./style.css";
 export default function Splash() {
   return (
     <div className="hero-image">
-      
       <div className="container">
         <img className="whiteblot" src={Whiteblot} alt="inkblot" />
         <a href="https://fontmeme.com/fonts/tattoo-ink-font/">

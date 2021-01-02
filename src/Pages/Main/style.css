@@ -1,8 +1,9 @@
 .searchpage {
   background-image: url("./Images/tat-girl.jpeg");
-  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center top;
+  background-repeat: no-repeat;
+  font-family: "Sedgwick Ave Display", cursive;
 }
 
 .logo {
@@ -17,22 +18,25 @@
   margin: -30px;
 }
 
+.description {
+  max-width: 600px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 36px;
+  color: whitesmoke;
+}
+
 main {
-  margin-top: 300px;
+  margin-top: 50px;
   text-align: center;
 }
 
 .searchUnsplash {
   margin-left: 30px;
   margin-right: 30px;
-  margin-bottom: 50px;
-}
-
-.description {
-  margin-bottom: 25px;
-  font-size: 28px;
-  font-family: "Sedgwick Ave Display", cursive;
-  color: whitesmoke;
+  margin-bottom: 60px;
 }
 
 .searchbar {
@@ -42,18 +46,14 @@ main {
 }
 
 footer {
-  background-color: whitesmoke;
-  text-align: center;
+  height: 60px;
   width: 100%;
-  padding: 8px;
-  color: peachpuff;
-  position: fixed;
-  bottom: 0px;
+  text-align: center;
+  background-color: whitesmoke;
+  color: black;
   left: 0px;
   right: 0px;
+  bottom: 0px;
+  padding: 20px;
   box-shadow: 0 0 10px 2px;
-}
-
-.copy {
-  color: black;
 }

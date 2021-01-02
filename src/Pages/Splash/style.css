@@ -1,7 +1,7 @@
 .hero-image {
-  height: 750px;
+  min-height: 1368px;
   background-image: url("./Images/herotattoo.jpg");
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
   text-align: center;
   background-attachment: fixed;

@@ -1,9 +1,15 @@
 import Search from "../../Components/Search";
 import UnsplashImages from "../../Components/UnsplashImages";
+import Foursquare from "../../Components/Foursquare";
 import Whiteblot from "./Images/whiteblot.png";
 import "./style.css";
 
-export const Main = ({ handleFormSubmit, handleInputChange, results }) => {
+export const Main = ({
+  handleFormSubmit,
+  handleInputChange,
+  results,
+  response,
+}) => {
   return (
     <div className="searchpage">
       <header className="logo">
@@ -22,26 +28,28 @@ export const Main = ({ handleFormSubmit, handleInputChange, results }) => {
         </a>
       </header>
 
+      <h2 className="description">
+        Welcome, type in the idea of your tattoo and click submit. <br />
+        We'll provide you with creative images and the nearest tattoo artist
+        near you!
+      </h2>
+
       <main>
         <div className="searchUnsplash">
-          <h2 className="description">
-            Welcome, type in the idea of your tattoo and click submit. <br />
-            We'll provide you with creative images and the nearest tattoo artist
-            near you!
-          </h2>
-
           {/* Searchbar */}
           <Search
             className="searchbar"
             handleInputChange={handleInputChange}
             handleFormSubmit={handleFormSubmit}
           />
+          {/* Tattoo shops */}
+          <Foursquare response={response} />
           {/* Unsplash Images */}
           <UnsplashImages results={results} />
         </div>
       </main>
       <footer>
-        <h4 className="copy">Ink Map | The Wombats &copy;</h4>
+        <h4>Ink Map | The Wombats &copy;</h4>
       </footer>
     </div>
   );

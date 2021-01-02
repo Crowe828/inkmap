@@ -1,0 +1,14 @@
+.foursquare {
+  font-size: 20px;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: whitesmoke;
+  background-color: chocolate;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 0 8px 2px;
+  margin: 20px;
+  opacity: 0.85;
+}
+
+.places {
+  padding: 10px;
+}

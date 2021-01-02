@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 import API from "./Utils/API";
 import Splash from "./Pages/Splash";
 import Main from "./Pages/Main";
-import "./App.css";
 
 export const App = () => {
   // state for data that comes in for the API call and the search term in the search bar
@@ -29,8 +28,8 @@ export const App = () => {
   function fsPlaces() {
     API.foursquare()
       .then((res) => {
-        console.log(res.data.response.groups[0].items[0].venue.name);
-        setResponse(res.data.response.groups[0])
+        console.log(res.data.response.groups[0].items);
+        setResponse(res.data.response.groups[0].items);
       })
       .catch((err) => console.log(err));
   }
