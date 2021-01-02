@@ -9,6 +9,7 @@ export const App = () => {
   // state for data that comes in for the API call and the search term in the search bar
   const [results, setResults] = useState([]);
   const [search, setSearch] = useState("");
+  const [response, setResponse] = useState([]);
 
   // On mount state will display tattoo images
   useEffect(() => {
@@ -28,7 +29,8 @@ export const App = () => {
   function fsPlaces() {
     API.foursquare()
       .then((res) => {
-        console.log(res.data.response.groups[0].items);
+        console.log(res.data.response.groups[0].items[0].venue.name);
+        setResponse(res.data.response.groups[0])
       })
       .catch((err) => console.log(err));
   }
@@ -63,6 +65,7 @@ export const App = () => {
             handleInputChange={handleInputChange}
             results={results}
             search={search}
+            response={response}
           />
         </Route>
       </Switch>

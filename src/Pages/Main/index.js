@@ -3,12 +3,7 @@ import UnsplashImages from "../../Components/UnsplashImages";
 import Whiteblot from "./Images/whiteblot.png";
 import "./style.css";
 
-export const Main = ({
-  handleFormSubmit,
-  handleInputChange,
-  results,
-  response,
-}) => {
+export const Main = ({ handleFormSubmit, handleInputChange, results }) => {
   return (
     <div className="searchpage">
       <header className="logo">
