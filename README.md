@@ -17,10 +17,10 @@ _2021 UPDATE:_ This application has been rebuilt using React! Due to the cost as
   ![Splash Page](https://github.com/Crowe828/inkmap/blob/master/public/img/splashpage.png)
 
 - The second page opens with a searchbar as well as a list of addresses of local tattoo shops.
-  ![Search](https://github.com/Crowe828/inkmap/blob/master/public/img/inkmap-maps.png)
+  ![Search](https://github.com/Crowe828/inkmap/blob/master/public/img/search.png)
 
 - Once a user searches for an idea for a tattoo, below the map will display a variety of images (provided by Unsplash) to inspire the users idea.
-  ![Unsplash Images](https://github.com/Crowe828/inkmap/blob/public/unsplash-images.png)
+  ![Unsplash Images](https://github.com/Crowe828/inkmap/blob/public/img/unsplash-images.png)
 
 ## Built With
 
