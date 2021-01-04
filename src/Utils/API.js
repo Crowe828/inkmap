@@ -31,12 +31,6 @@ export default {
     let lat = "28.5383";
     let lon = "-81.3792";
 
-    navigator.geolocation.getCurrentPosition(function (position) {
-      let lat = position.coords.latitude.toFixed(4);
-      let lon = position.coords.longitude.toFixed(4);
-      console.log(lat, lon);
-    });
-
     return Axios.get(
       "https://api.foursquare.com/v2/venues/explore?client_id=" +
         fsID +
