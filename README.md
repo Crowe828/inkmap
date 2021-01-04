@@ -20,7 +20,7 @@ _2021 UPDATE:_ This application has been rebuilt using React! Due to the cost as
   ![Search](https://github.com/Crowe828/inkmap/blob/master/public/img/search.png)
 
 - Once a user searches for an idea for a tattoo, below the map will display a variety of images (provided by Unsplash) to inspire the users idea.
-  ![Unsplash Images](https://github.com/Crowe828/inkmap/blob/public/img/unsplash-images.png)
+  ![Unsplash Images](https://github.com/Crowe828/inkmap/blob/master/public/img/unsplash-images.png)
 
 ## Built With
 
