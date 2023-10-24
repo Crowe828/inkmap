@@ -1,25 +1,16 @@
 {
   "files": {
-    "main.css": "/inkmap/static/css/main.9b8fb513.chunk.css",
-    "main.js": "/inkmap/static/js/main.c81cc18c.chunk.js",
-    "main.js.map": "/inkmap/static/js/main.c81cc18c.chunk.js.map",
-    "runtime-main.js": "/inkmap/static/js/runtime-main.5ea4fb86.js",
-    "runtime-main.js.map": "/inkmap/static/js/runtime-main.5ea4fb86.js.map",
-    "static/css/2.632c9fdd.chunk.css": "/inkmap/static/css/2.632c9fdd.chunk.css",
-    "static/js/2.8a92e932.chunk.js": "/inkmap/static/js/2.8a92e932.chunk.js",
-    "static/js/2.8a92e932.chunk.js.map": "/inkmap/static/js/2.8a92e932.chunk.js.map",
+    "main.css": "/inkmap/static/css/main.c178ef0b.css",
+    "main.js": "/inkmap/static/js/main.d8c6ad7e.js",
+    "static/media/herotattoo.jpg": "/inkmap/static/media/herotattoo.4ce972d367c2b8e84baa.jpg",
+    "static/media/tat-girl.jpeg": "/inkmap/static/media/tat-girl.d1c90793c7e0ec592500.jpeg",
+    "static/media/whiteblot.png": "/inkmap/static/media/whiteblot.01e2cb1939dc5697e215.png",
     "index.html": "/inkmap/index.html",
-    "static/css/2.632c9fdd.chunk.css.map": "/inkmap/static/css/2.632c9fdd.chunk.css.map",
-    "static/css/main.9b8fb513.chunk.css.map": "/inkmap/static/css/main.9b8fb513.chunk.css.map",
-    "static/js/2.8a92e932.chunk.js.LICENSE.txt": "/inkmap/static/js/2.8a92e932.chunk.js.LICENSE.txt",
-    "static/media/style.css": "/inkmap/static/media/tat-girl.d1c90793.jpeg",
-    "static/media/whiteblot.01e2cb19.png": "/inkmap/static/media/whiteblot.01e2cb19.png"
+    "main.c178ef0b.css.map": "/inkmap/static/css/main.c178ef0b.css.map",
+    "main.d8c6ad7e.js.map": "/inkmap/static/js/main.d8c6ad7e.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ea4fb86.js",
-    "static/css/2.632c9fdd.chunk.css",
-    "static/js/2.8a92e932.chunk.js",
-    "static/css/main.9b8fb513.chunk.css",
-    "static/js/main.c81cc18c.chunk.js"
+    "static/css/main.c178ef0b.css",
+    "static/js/main.d8c6ad7e.js"
   ]
 }
